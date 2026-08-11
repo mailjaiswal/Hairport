@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hairport by Santino - Salunke Vihar's Premium Unisex Salon, Pune</title>
+    <meta name="description" content="Where Style Takes Flight! Buckle up for a first-class beauty experience at Hairport by Santino, Salunke Vihar's premier unisex salon in Pune, India. Led by celebrity hairstylist Santino & Ana.">
+    <link rel="icon" href="assets/logo.png" type="image/png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Material Symbols & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#0e0e0e',
+                        surface: '#131313',
+                        'surface-high': '#1b1b1b',
+                        'burnished-copper': '#BA8945',
+                        'primary-gold': '#F4BD73',
+                        'muted-gold': '#8E6935',
+                        'warm-ivory': '#FDFCF8',
+                        'surface-variant': '#d4c4b4'
+                    },
+                    fontFamily: {
+                        heading: ['Playfair Display', 'Georgia', 'serif'],
+                        body: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Instagram Official Embed Script -->
+    <script async src="https://www.instagram.com/embed.js"></script>
+</head>
+<body class="bg-obsidian text-warm-ivory font-body selection:bg-burnished-copper selection:text-obsidian relative">
+
+    <!-- Sticky Navigation Navbar -->
+    <header id="main-navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-5 px-6 md:px-16 backdrop-blur-xl bg-obsidian/80 border-b border-burnished-copper/20">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="assets/logo.png" alt="Hairport by Santino Logo" class="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-widest text-warm-ivory/80">
+                <a href="#about" class="hover:text-primary-gold transition-colors">About Us</a>
+                <a href="#services" class="hover:text-primary-gold transition-colors">Services</a>
+                <a href="#artisans" class="hover:text-primary-gold transition-colors">Artisans</a>
+                <a href="#instagram-feed" class="hover:text-primary-gold transition-colors">Instagram</a>
+                <a href="#sec-review" class="hover:text-primary-gold transition-colors">Reviews</a>
+                <a href="#" class="open-rate-card hover:text-primary-gold transition-colors flex items-center gap-1.5" data-page="0">
+                    <span class="material-symbols-outlined text-sm text-burnished-copper">receipt_long</span> Rate Card
+                </a>
+            </nav>
+
+            <!-- CTA Actions (Book a Service) -->
+            <div class="hidden md:flex items-center gap-4">
+                <a href="tel:+917499913972" class="btn-outline-gold text-xs py-2.5 px-5">
+                    <i class="fas fa-phone text-xs"></i> Call Salon
+                </a>
+                <button class="btn-gold open-booking-modal text-xs py-2.5 px-6 pulse-glow">
+                    Book a Service
+                </button>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-toggle" class="md:hidden text-primary-gold p-2 text-2xl focus:outline-none">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-drawer" class="fixed inset-0 z-50 bg-obsidian/95 backdrop-blur-2xl transition-transform duration-500 translate-x-full md:hidden flex flex-col justify-between p-8 border-l border-burnished-copper/30">
+        <div>
+            <div class="flex items-center justify-between border-b border-burnished-copper/20 pb-6 mb-8">
+                <img src="assets/logo.png" alt="Hairport Logo" class="h-10 w-auto">
+                <button id="close-mobile-drawer" class="text-primary-gold text-3xl">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-6 text-sm font-semibold uppercase tracking-widest">
+                <a href="#about" class="mobile-nav-link text-warm-ivory hover:text-primary-gold">About Us</a>
+                <a href="#services" class="mobile-nav-link text-warm-ivory hover:text-primary-gold">Services</a>
+                <a href="#artisans" class="mobile-nav-link text-warm-ivory hover:text-primary-gold">Artisans</a>
+                <a href="#instagram-feed" class="mobile-nav-link text-warm-ivory hover:text-primary-gold">Instagram Feed</a>
+                <a href="#sec-review" class="mobile-nav-link text-warm-ivory hover:text-primary-gold">Reviews</a>
+                <a href="#" class="mobile-nav-link open-rate-card text-burnished-copper flex items-center gap-2" data-page="0">
+                    <span class="material-symbols-outlined">receipt_long</span> Rate Card Lightbox
+                </a>
+            </nav>
+        </div>
+
+        <div class="space-y-4 pt-6 border-t border-burnished-copper/20">
+            <button class="open-booking-modal w-full btn-gold py-3 text-xs">
+                Book a Service
+            </button>
+            <a href="tel:+917499913972" class="w-full btn-outline-gold py-3 text-xs text-center block">
+                <i class="fas fa-phone mr-2"></i> +91 74999 13972
+            </a>
+        </div>
+    </div>
+
+    <!-- MAIN STACK WRAPPER -->
+    <main class="stack-wrapper">
+
+        <!-- 1. MAIN HERO CAROUSEL SECTION -->
+        <section id="sec-hero" class="stack-section hero-carousel-wrapper">
+            <canvas id="gold-particles-canvas"></canvas>
+
+            <div class="carousel-slide active">
+                <div class="w-full h-full pt-20 md:pt-24 flex items-center justify-center overflow-hidden bg-obsidian">
+                    <img src="assets/banner1.webp" alt="Hairport by Santino Store Front" class="w-full h-full object-cover object-top">
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="w-full h-full pt-20 md:pt-24 flex items-center justify-center overflow-hidden bg-obsidian">
+                    <img src="assets/banner2.webp" alt="Hairport Interior Bays" class="w-full h-full object-cover object-center">
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="w-full h-full pt-20 md:pt-24 flex items-center justify-center overflow-hidden bg-obsidian">
+                    <img src="assets/banner3.webp" alt="Hairport Luxury Spa" class="w-full h-full object-cover object-center">
+                </div>
+            </div>
+
+            <div class="carousel-overlay"></div>
+
+            <div class="relative z-20 h-full max-w-7xl mx-auto px-6 md:px-16 flex flex-col justify-center items-start pt-24 md:pt-28">
+                <div class="reveal-fade-up max-w-3xl">
+                    <div class="inline-flex items-center gap-2 badge-gold mb-6">
+                        <i class="fas fa-plane text-xs rotate-[-45deg]"></i> SALUNKE VIHAR, PUNE
+                    </div>
+                    <h1 class="font-heading text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-warm-ivory mb-6 leading-tight">
+                        WHERE STYLE <br>
+                        <span class="italic text-primary-gold font-normal">TAKES FLIGHT</span>
+                    </h1>
+                    <p class="text-base sm:text-xl text-surface-variant max-w-2xl mb-10 font-light">
+                        Buckle up for a first-class beauty experience at Pune's premier luxury unisex salon. Crafted by celebrity hairstylist <strong class="text-warm-ivory">Santino</strong> and co-pilot <strong class="text-warm-ivory">Ana</strong>.
+                    </p>
+
+                    <div class="flex flex-wrap gap-5">
+                        <button class="btn-gold open-booking-modal">
+                            Book a Service
+                            <span class="material-symbols-outlined text-sm">east</span>
+                        </button>
+                        <button class="btn-outline-gold open-rate-card" data-page="0">
+                            View Rate Card
+                            <span class="material-symbols-outlined text-sm">menu_book</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="absolute bottom-10 right-6 md:right-16 z-30 flex items-center gap-4">
+                <button id="hero-prev" class="w-12 h-12 rounded-full border border-burnished-copper/40 bg-obsidian/60 hover:bg-burnished-copper hover:text-obsidian flex items-center justify-center transition-all">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                </button>
+                <button id="hero-next" class="w-12 h-12 rounded-full border border-burnished-copper/40 bg-obsidian/60 hover:bg-burnished-copper hover:text-obsidian flex items-center justify-center transition-all">
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </button>
+            </div>
+
+            <div class="carousel-progress-bar"></div>
+        </section>
+
+        <!-- 2. BEAUTY BOARDING PASS / ABOUT SECTION -->
+        <section id="about" class="stack-section py-24 px-6 md:px-16 flex items-center justify-center">
+            <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 reveal-fade-left">
+                    <div class="heritage-frame overflow-hidden bg-surface rounded-sm">
+                        <img src="assets/about.webp" alt="Hairport by Santino Salon Exterior" class="w-full h-[450px] object-cover hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 reveal-fade-right">
+                    <span class="badge-gold mb-4">Your Beauty Boarding Pass</span>
+                    <h2 class="font-heading text-3xl md:text-5xl text-warm-ivory mb-6 leading-snug">
+                        First-Class Grooming <br><span class="text-primary-gold italic">&amp; Hair Artistry</span>
+                    </h2>
+                    <p class="text-surface-variant mb-6 leading-relaxed">
+                        Land with flawless hair, glowing skin, and runway-ready looks at Salunke Vihar's most iconic salon sanctuary. Every session is precision-tailored by our master artisans to elevate your natural posture and silhouette.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center gap-3 p-3 bg-surface border border-burnished-copper/20 rounded">
+                            <i class="fas fa-plane text-burnished-copper text-sm rotate-[-45deg]"></i>
+                            <span class="text-xs font-semibold tracking-wider text-warm-ivory">HAIR &amp; TANINOPLASTIA</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-surface border border-burnished-copper/20 rounded">
+                            <i class="fas fa-plane text-burnished-copper text-sm rotate-[-45deg]"></i>
+                            <span class="text-xs font-semibold tracking-wider text-warm-ivory">RADIANT SKIN FACIALS</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-surface border border-burnished-copper/20 rounded">
+                            <i class="fas fa-plane text-burnished-copper text-sm rotate-[-45deg]"></i>
+                            <span class="text-xs font-semibold tracking-wider text-warm-ivory">BRIDAL &amp; PARTY GLAM</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-surface border border-burnished-copper/20 rounded">
+                            <i class="fas fa-plane text-burnished-copper text-sm rotate-[-45deg]"></i>
+                            <span class="text-xs font-semibold tracking-wider text-warm-ivory">GEL NAILS &amp; EXTENSIONS</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-6 border-t border-burnished-copper/20 pt-6">
+                        <div>
+                            <div class="text-xs text-burnished-copper uppercase font-semibold">Flight Hours</div>
+                            <div class="text-lg font-heading text-warm-ivory">10:00 AM – 9:00 PM Daily</div>
+                        </div>
+                        <div class="h-10 w-px bg-burnished-copper/20"></div>
+                        <div>
+                            <div class="text-xs text-burnished-copper uppercase font-semibold">Location</div>
+                            <div class="text-sm text-warm-ivory">Wanowrie, Pune</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SERVICES SECTION (SINGLE-ROW HORIZONTAL SLIDER WITH ARROW CONTROLS & TOUCH SWIPE) -->
+        <section id="services" class="stack-section py-24 px-6 md:px-16 max-w-7xl mx-auto flex flex-col justify-center relative">
+            <div class="text-center mb-8 reveal-fade-up">
+                <span class="badge-gold mb-3">What We Provide</span>
+                <h2 class="font-heading text-3xl md:text-5xl text-warm-ivory mb-4">
+                    Bespoke <span class="text-primary-gold italic">Services</span>
+                </h2>
+                <p class="text-surface-variant text-sm max-w-xl mx-auto">
+                    Explore tailored grooming, hair therapy, skincare, and nail styling for Men, Women, and Kids.
+                </p>
+
+                <div class="flex justify-center items-center gap-4 mt-8">
+                    <button class="gender-tab-btn px-8 py-3 text-xs font-bold uppercase tracking-widest rounded border bg-burnished-copper text-obsidian-deep transition-all" data-gender="men">
+                        <i class="fas fa-mars mr-2"></i> Men
+                    </button>
+                    <button class="gender-tab-btn px-8 py-3 text-xs uppercase tracking-widest rounded border border-burnished-copper/30 text-on-surface-variant bg-surface hover:border-burnished-copper transition-all" data-gender="women">
+                        <i class="fas fa-venus mr-2"></i> Women
+                    </button>
+                    <button class="gender-tab-btn px-8 py-3 text-xs uppercase tracking-widest rounded border border-burnished-copper/30 text-on-surface-variant bg-surface hover:border-burnished-copper transition-all" data-gender="kids">
+                        <i class="fas fa-child mr-2"></i> Kids
+                    </button>
+                </div>
+            </div>
+
+            <div class="relative w-full">
+                <button id="svc-scroll-prev" class="svc-arrow-btn absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2" title="Scroll Left">
+                    <span class="material-symbols-outlined">chevron_left</span>
+                </button>
+                <button id="svc-scroll-next" class="svc-arrow-btn absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2" title="Scroll Right">
+                    <span class="material-symbols-outlined">chevron_right</span>
+                </button>
+
+                <div id="gender-tabs-container">
+                    <!-- 1. MEN SERVICES ROW SLIDER -->
+                    <div id="services-men" class="gender-tab-pane services-row-scroll">
+                        <div class="glass-panel rounded overflow-hidden glass-panel-hover flex flex-col justify-between">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="assets/men_haircut.jpg" alt="Men Haircut & Styling" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="p-5">
+                                <h4 class="font-heading text-lg text-warm-ivory mb-1">Haircut &amp; Styling</h4>
+                                <p class="text-surface-variant text-xs mb-3">Modern cuts tailored for men by Santino.</p>
+                                <button class="open-booking-modal btn-gold text-xs py-2 px-4 w-full">Book Service</button>
+                            </div>
+                        </div>
+
+                        <div class="glass-panel rounded overflow-hidden glass-panel-hover flex flex-col justify-between">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="assets/men_beard.jpg" alt="Beard Grooming & Shaping" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="p-5">
+                                <h4 class="font-heading text-lg text-warm-ivory mb-1">Beard Grooming</h4>
+                                <p class="text-surface-variant text-xs mb-3">Hot towel trim &amp; razor shaping.</p>
+                                <button class="open-booking-modal btn-gold text-xs py-2 px-4 w-full">Book Service</button>
+                            </div>
+                        </div>
+
+                        <div class="glass-panel rounded overflow-hidden glass-panel-hover flex flex-col justify-between">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="assets/men_colour.jpg" alt="Men Hair Coloring" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="p-5">
+                                <h4 class="font-heading text-lg text-warm-ivory mb-1">Hair Coloring</h4>
+                                <p class="text-surface-variant text-xs mb-3">Gray coverage &amp; men's highlights.</p>
+                                <button class="open-booking-modal btn-gold text-xs py-2 px-4 w-full">Book Service</button>
+                            </div>
+                        </div>
+
+                        <div class="glass-panel rounded overflow-hidden glass-panel-hover flex flex-col justify-between">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="assets/men_scalp.jpg" alt="Scalp Care Treatments" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="p-5">
+                                <h4 class="font-heading text-lg text-warm-ivory mb-1">Scalp Care Treatments</h4>
+                                <p class="text-surface-variant text-xs mb-3">Anti-dandruff &amp; scalp detox spa.</p>
+                                <button class="open-booking-modal btn-gold text-xs py-2 px-4 w-full">Book Service</button>
+                            </div>
+                        </div>
+
+                        <div class="glass-panel rounded overflow-hidden glass-panel-hover flex flex-col justify-between">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="assets/men_facial.jpg" alt="Skin Treatments & Facials" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="p-5">
+                                <h4 class="font-heading text-lg text-warm-ivory mb-1">Skin Facials</h4>
+                                <p class="text-surface-variant text-xs mb-3">Hydra-facials &amp; skin clean-ups.</p>
+                                <button class="open-booking-modal btn-gold text-xs py-2 px-4 w-full">Book Service</button>
+                            </div>
+                        </div>
+
+                        <div class="glass-panel rounded overflow-hidden glass-panel-hover flex flex-col justify-between">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="assets/men_pedicure.jpg" alt="Men Manicure & Pedicure" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="p-5">
+                                <h4 class="font-heading text-lg text-warm-ivory mb-1">Manicure &amp; Pedicure</h4>
+                                <p class="text-surface-variant text-xs mb-3">Nail care &amp; relaxing foot spa.</p>
+                                <button class="open-booking-modal btn-gold text-xs py-2 px-4 w-full">Book Service</button>
+                            </div>
+                        </div>
+
+                        <div class="glass-panel rounded overflow-hidden glass-panel-hover flex flex-col justify-between">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="assets/men_waxing.webp" alt="Body Waxing for Men" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="p-5">
+                                <h4 class="font-heading text-lg text-warm-ivory mb-1">Body Waxing</h4>
+                                <p class="text-surface-variant text-xs mb-3">Sleek, painless men's body waxing.</p>
+                                <button class="open-booking-modal btn-gold text-xs py-2 px-4 w-full">Book Service</button>
+                            </div>
+                        </div>
+
+                        <div class="glass-panel rounded overflow-hidden glass-panel-hover flex flex-col justify-between">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="assets/men_taninoplastia.webp" alt="Men Taninoplastia" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="p-5">
+                                <h4 class="font-heading text-lg text-warm-ivory mb-1">Taninoplastia</h4>
+                                <p class="text-surface-variant text-xs mb-3">Organic smoothing therapy.</p>
+                                <button class="open-booking-modal btn-gold text-xs py-2 px-4 w-full">Book Service</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. WOMEN SERVICES ROW SLIDER -->
+                    <div id="services-women" class="gender-tab-pane hidden services-row-scroll">
+                        <div class="glass-panel rounded overflow-hidden glass-panel-hover flex flex-col justify-between">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="assets/women_haircut.webp" alt="Women Haircut" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="p-5">
+                                <h4 class="font-heading text-lg text-warm-ivory mb-1">Haircut &amp; Styling</h4>
+                                <p class="text-surface-variant text-xs mb-3">Trendy cuts by Santino &amp; Ana.</p>
+                                <button class="open-booking-modal btn-gold text-xs py-2 px-4 w-full">Book Service</button>
+                            </div>
+                        </div>
+
+                        <div class="glass-panel rounded overflow-hidden glass-panel-hover flex flex-col justify-between">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="assets/women_colour.jpg" alt="Women Hair Coloring" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="p-5">
+                                <h4 class="font-heading text-lg text-warm-ivory mb-1">Hair Color &amp; Balayage</h4>
+                                <p class="text-surface-variant text-xs mb-3">Stunning global colors &amp; highlights.</p>
+                                <button class="open-booking-modal btn-gold text-xs py-2 px-4 w-full">Book Service</button>
+                            </div>
+                        </div>
+
+                        <div class="glass-panel rounded overflow-hidden glass-panel-hover flex flex-col justify-between">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="assets/women_taninoplastia.jpg" alt="Women Taninoplastia" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="p-5">
+                                <h4 class="font-heading text-lg text-warm-ivory mb-1">Taninoplastia &amp; Hair Botox</h4>
+                                <p class="text-surface-variant text-xs mb-3">Organic hair smoothing spa.</p>
+                                <button class="open-booking-modal btn-gold text-xs py-2 px-4 w-full">Book Service</button>
+                            </div>
+                        </div>
+
+                        <div class="glass-panel rounded overflow-hidden glass-panel-hover flex flex-col justify-between">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="assets/women_scalp.webp" alt="Scalp Care & Hair Spa" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="p-5">
+                                <h4 class="font-heading text-lg text-warm-ivory mb-1">Scalp Care &amp; Hair Spa</h4>
+                                <p class="text-surface-variant text-xs mb-3">Nourishing hair &amp; scalp treatments.</p>
+                                <button class="open-booking-modal btn-gold text-xs py-2 px-4 w-full">Book Service</button>
+                            </div>
+                        </div>
+
+                        <div class="glass-panel rounded overflow-hidden glass-panel-hover flex flex-col justify-between">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="assets/women_makeup.avif" alt="Women Makeup" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="p-5">
+                                <h4 class="font-heading text-lg text-warm-ivory mb-1">Bridal &amp; HD Makeup</h4>
+                                <p class="text-surface-variant text-xs mb-3">Flawless glam for occasions.</p>
+                                <button class="open-booking-modal btn-gold text-xs py-2 px-4 w-full">Book Service</button>
+                            </div>
+                        </div>
+
+                        <div class="glass-panel rounded overflow-hidden glass-panel-hover flex flex-col justify-between">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="assets/women_facial.avif" alt="Japanese Kanpeiki Facials" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="p-5">
+                                <h4 class="font-heading text-lg text-warm-ivory mb-1">Kanpeiki Facials</h4>
+                                <p class="text-surface-variant text-xs mb-3">Japanese facials for glowing skin.</p>
+                                <button class="open-booking-modal btn-gold text-xs py-2 px-4 w-full">Book Service</button>
+                            </div>
+                        </div>
+
+                        <div class="glass-panel rounded overflow-hidden glass-panel-hover flex flex-col justify-between">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="assets/women_pedicure.webp" alt="Women Pedicure" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="p-5">
+                                <h4 class="font-heading text-lg text-warm-ivory mb-1">Manicures &amp; Pedicures</h4>
+                                <p class="text-surface-variant text-xs mb-3">Relaxing spa nail care.</p>
+                                <button class="open-booking-modal btn-gold text-xs py-2 px-4 w-full">Book Service</button>
+                            </div>
+                        </div>
+
+                        <div class="glass-panel rounded overflow-hidden glass-panel-hover flex flex-col justify-between">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="assets/women_nails.avif" alt="Women Nails" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="p-5">
+                                <h4 class="font-heading text-lg text-warm-ivory mb-1">Nail Extensions &amp; Art</h4>
+                                <p class="text-surface-variant text-xs mb-3">Acrylic extensions &amp; nail art.</p>
+                                <button class="open-booking-modal btn-gold text-xs py-2 px-4 w-full">Book Service</button>
+                            </div>
+                        </div>
+
+                        <div class="glass-panel rounded overflow-hidden glass-panel-hover flex flex-col justify-between">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="assets/women_waxing.avif" alt="Rica Body Waxing" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="p-5">
+                                <h4 class="font-heading text-lg text-warm-ivory mb-1">Body Waxing (Rica Wax)</h4>
+                                <p class="text-surface-variant text-xs mb-3">Gentle &amp; smooth Rica waxing.</p>
+                                <button class="open-booking-modal btn-gold text-xs py-2 px-4 w-full">Book Service</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. KIDS SERVICES ROW SLIDER -->
+                    <div id="services-kids" class="gender-tab-pane hidden services-row-scroll">
+                        <div class="glass-panel rounded overflow-hidden glass-panel-hover flex flex-col justify-between">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="assets/kids_haircut.webp" alt="Kids Haircut" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="p-5 text-center">
+                                <h4 class="font-heading text-lg text-warm-ivory mb-1">Kids Haircut</h4>
+                                <p class="text-surface-variant text-xs mb-3">Fun &amp; gentle haircuts.</p>
+                                <button class="open-booking-modal btn-gold text-xs py-2 px-6">Book Service</button>
+                            </div>
+                        </div>
+
+                        <div class="glass-panel rounded overflow-hidden glass-panel-hover flex flex-col justify-between">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="assets/kids_styling.jpg" alt="Kids Braiding" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="p-5 text-center">
+                                <h4 class="font-heading text-lg text-warm-ivory mb-1">Kids Braiding</h4>
+                                <p class="text-surface-variant text-xs mb-3">Cute braiding &amp; styling.</p>
+                                <button class="open-booking-modal btn-gold text-xs py-2 px-6">Book Service</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. ARTISANS SPOTLIGHT SECTION -->
+        <section id="artisans" class="stack-section py-24 px-6 md:px-16 flex items-center justify-center">
+            <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 reveal-fade-left">
+                    <span class="badge-gold mb-3">Master Stylists</span>
+                    <h2 class="font-heading text-3xl md:text-5xl text-warm-ivory mb-6">
+                        Crafted by <br><span class="text-primary-gold italic">Santino &amp; Ana</span>
+                    </h2>
+                    <p class="text-surface-variant mb-6 leading-relaxed">
+                        With decades of combined international experience, Santino and Ana bring bespoke hair design and editorial makeup mastery to every single client in Salunke Vihar.
+                    </p>
+                    <button class="btn-gold open-booking-modal text-xs">
+                        Book a Service
+                    </button>
+                </div>
+
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6 reveal-fade-right">
+                    <div class="glass-panel p-6 heritage-frame text-center">
+                        <div class="w-24 h-24 rounded-full border-2 border-burnished-copper mx-auto mb-4 overflow-hidden">
+                            <img src="assets/about.webp" alt="Santino" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-heading text-xl text-warm-ivory">SANTINO</h4>
+                        <span class="text-xs text-burnished-copper uppercase tracking-widest font-semibold block mb-3">Celebrity Hairstylist</span>
+                        <p class="text-xs text-surface-variant">Master of precision cuts &amp; taninoplastia smooth therapy.</p>
+                    </div>
+
+                    <div class="glass-panel p-6 heritage-frame text-center">
+                        <div class="w-24 h-24 rounded-full border-2 border-burnished-copper mx-auto mb-4 overflow-hidden">
+                            <img src="assets/banner3.webp" alt="Ana" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-heading text-xl text-warm-ivory">ANA</h4>
+                        <span class="text-xs text-burnished-copper uppercase tracking-widest font-semibold block mb-3">Co-Pilot &amp; Skin Expert</span>
+                        <p class="text-xs text-surface-variant">Expert in bridal glam, facials, and creative nail art.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. INSTAGRAM FEED & LIVE REELS STREAM (@santinoo_hairmafia) -->
+        <section id="instagram-feed" class="stack-section py-24 px-6 md:px-16 flex flex-col justify-center">
+            <div class="max-w-7xl mx-auto w-full">
+                <div class="text-center mb-8 reveal-fade-up">
+                    <span class="badge-gold mb-3">
+                        <i class="fab fa-instagram mr-1.5"></i> Live Instagram Stream
+                    </span>
+                    <h2 class="font-heading text-3xl md:text-5xl text-warm-ivory mb-4">
+                        Latest Reels From <span class="text-primary-gold italic">@santinoo_hairmafia</span>
+                    </h2>
+                    <p class="text-surface-variant text-sm max-w-xl mx-auto">
+                        Live reels, hair transformations, and celebrity grooming streamed directly from Master Santino's Instagram handle.
+                    </p>
+                </div>
+
+                <!-- Instagram Live Feed Iframe Window & Interactive Reel Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-8">
+                    
+                    <!-- Left: Live Embedded Instagram Profile Feed Window -->
+                    <div class="lg:col-span-6 reveal-fade-left">
+                        <div class="heritage-frame overflow-hidden rounded bg-surface">
+                            <iframe src="https://www.instagram.com/santinoo_hairmafia/embed" title="Live Instagram Feed @santinoo_hairmafia" class="w-full h-[580px] border-0 bg-obsidian" allowtransparency="true" frameborder="0" scrolling="yes"></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Right: Live Reel Video Showcase Cards -->
+                    <div class="lg:col-span-6 space-y-4 reveal-fade-right">
+                        <div class="insta-profile-bar flex items-center justify-between p-4 mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-full border border-primary-gold overflow-hidden">
+                                    <img src="assets/about.webp" alt="Santino" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-warm-ivory text-sm">santinoo_hairmafia</h4>
+                                    <span class="text-xs text-burnished-copper font-medium">Verified Salon Feed · Salunke Vihar</span>
+                                </div>
+                            </div>
+                            <a href="https://www.instagram.com/santinoo_hairmafia/" target="_blank" class="btn-gold text-[11px] py-2 px-4">
+                                <i class="fab fa-instagram"></i> Open Instagram
+                            </a>
+                        </div>
+
+                        <!-- Reel Highlight Item 1 -->
+                        <a href="https://www.instagram.com/santinoo_hairmafia/" target="_blank" class="glass-panel p-4 rounded flex items-center gap-4 glass-panel-hover group block">
+                            <div class="w-24 h-24 rounded overflow-hidden relative flex-shrink-0">
+                                <img src="assets/women_colour.jpg" alt="Balayage Reel" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-obsidian/40 flex items-center justify-center">
+                                    <i class="fas fa-play text-primary-gold text-lg group-hover:scale-125 transition-transform"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="text-[10px] text-primary-gold font-semibold uppercase tracking-wider mb-1">
+                                    <i class="fas fa-music mr-1"></i> Live Reel · @santinoo_hairmafia
+                                </div>
+                                <h5 class="font-bold text-warm-ivory text-sm mb-1">Caramel Balayage Hair Transformation</h5>
+                                <p class="text-xs text-surface-variant line-clamp-2">Sunkissed caramel tones precision-crafted by Santino. Watch full reel on Instagram.</p>
+                            </div>
+                        </a>
+
+                        <!-- Reel Highlight Item 2 -->
+                        <a href="https://www.instagram.com/santinoo_hairmafia/" target="_blank" class="glass-panel p-4 rounded flex items-center gap-4 glass-panel-hover group block">
+                            <div class="w-24 h-24 rounded overflow-hidden relative flex-shrink-0">
+                                <img src="assets/women_taninoplastia.jpg" alt="Taninoplastia Reel" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-obsidian/40 flex items-center justify-center">
+                                    <i class="fas fa-play text-primary-gold text-lg group-hover:scale-125 transition-transform"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="text-[10px] text-primary-gold font-semibold uppercase tracking-wider mb-1">
+                                    <i class="fas fa-music mr-1"></i> Live Reel · @santinoo_hairmafia
+                                </div>
+                                <h5 class="font-bold text-warm-ivory text-sm mb-1">Taninoplastia Organic Hair Botox</h5>
+                                <p class="text-xs text-surface-variant line-clamp-2">Zero formaldehyde smooth therapy. Watch the glossy reveal on Instagram.</p>
+                            </div>
+                        </a>
+
+                        <!-- Reel Highlight Item 3 -->
+                        <a href="https://www.instagram.com/santinoo_hairmafia/" target="_blank" class="glass-panel p-4 rounded flex items-center gap-4 glass-panel-hover group block">
+                            <div class="w-24 h-24 rounded overflow-hidden relative flex-shrink-0">
+                                <img src="assets/men_haircut.jpg" alt="Men Razor Fade Reel" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-obsidian/40 flex items-center justify-center">
+                                    <i class="fas fa-play text-primary-gold text-lg group-hover:scale-125 transition-transform"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="text-[10px] text-primary-gold font-semibold uppercase tracking-wider mb-1">
+                                    <i class="fas fa-music mr-1"></i> Live Reel · @santinoo_hairmafia
+                                </div>
+                                <h5 class="font-bold text-warm-ivory text-sm mb-1">Men's Razor Fade &amp; Beard Styling</h5>
+                                <p class="text-xs text-surface-variant line-clamp-2">Sharp hot towel beard sculpting. Stream live reel on Instagram.</p>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="https://www.instagram.com/santinoo_hairmafia/" target="_blank" class="btn-gold text-xs py-3.5 px-8 inline-flex items-center gap-3">
+                        <i class="fab fa-instagram text-lg"></i> Follow @santinoo_hairmafia on Instagram
+                        <span class="material-symbols-outlined text-sm">open_in_new</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. GOOGLE REVIEW SECTION (SPLIT LAYOUT: LEFT GIVE FEEDBACK CTA, RIGHT SCROLLABLE GOOGLE REVIEWS FEED) -->
+        <section id="sec-review" class="stack-section py-24 px-6 md:px-16 flex items-center justify-center">
+            <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                
+                <!-- Left Side: Give Feedback CTA Card -->
+                <div class="lg:col-span-5 reveal-fade-left">
+                    <div class="glass-panel p-8 md:p-10 heritage-frame text-left relative overflow-hidden">
+                        <div class="inline-flex items-center gap-2 badge-gold mb-4">
+                            <i class="fab fa-google text-xs text-primary-gold"></i> Google Feedback
+                        </div>
+
+                        <div class="flex items-center gap-2 mb-4 text-primary-gold text-2xl">
+                            <i class="fas fa-star pulse-glow"></i>
+                            <i class="fas fa-star pulse-glow"></i>
+                            <i class="fas fa-star pulse-glow"></i>
+                            <i class="fas fa-star pulse-glow"></i>
+                            <i class="fas fa-star pulse-glow"></i>
+                        </div>
+
+                        <h2 class="font-heading text-3xl md:text-4xl text-warm-ivory mb-4">
+                            Love our services? <br><span class="text-primary-gold italic">Please rate us on Google</span>
+                        </h2>
+                        <p class="text-surface-variant text-xs md:text-sm mb-8 font-light leading-relaxed">
+                            Your feedback keeps us flying high! Share your experience with Santino &amp; Ana and help others discover Pune's premier salon sanctuary.
+                        </p>
+
+                        <a href="https://g.page/r/CTQC7tZf96LGEAE/review" target="_blank" class="btn-gold text-xs py-3.5 px-8 w-full justify-center inline-flex items-center gap-3">
+                            <i class="fab fa-google text-base"></i> Write a Google Review
+                            <span class="material-symbols-outlined text-sm">open_in_new</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Side: Scrollable Top Google Reviews Feed -->
+                <div class="lg:col-span-7 reveal-fade-right">
+                    <div class="flex justify-between items-center mb-4 border-b border-burnished-copper/20 pb-3">
+                        <div class="flex items-center gap-2 text-warm-ivory font-bold text-sm">
+                            <i class="fab fa-google text-primary-gold"></i> Top Google Reviews
+                        </div>
+                        <div class="text-xs text-burnished-copper font-semibold">
+                            4.9 ★★★★★ (280+ Reviews)
+                        </div>
+                    </div>
+
+                    <!-- Scrollable Review Feed List -->
+                    <div class="google-reviews-scroll space-y-4">
+                        
+                        <!-- Review 1 -->
+                        <div class="review-card-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-9 h-9 rounded-full bg-burnished-copper/20 border border-burnished-copper text-primary-gold flex items-center justify-center font-bold text-sm">
+                                        P
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold text-xs text-warm-ivory">Priya Sharma</h5>
+                                        <span class="text-[10px] text-surface-variant">1 week ago · Salunke Vihar</span>
+                                    </div>
+                                </div>
+                                <div class="flex text-primary-gold text-xs">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-xs text-surface-variant leading-relaxed font-light">
+                                "Santino is absolute magic! Got the Taninoplastia organic hair smoothening done and my hair has never felt so silky, soft, and healthy. Highly recommend Hairport by Santino in Salunke Vihar!"
+                            </p>
+                        </div>
+
+                        <!-- Review 2 -->
+                        <div class="review-card-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-9 h-9 rounded-full bg-burnished-copper/20 border border-burnished-copper text-primary-gold flex items-center justify-center font-bold text-sm">
+                                        R
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold text-xs text-warm-ivory">Rohan Malhotra</h5>
+                                        <span class="text-[10px] text-surface-variant">2 weeks ago · Wanowrie</span>
+                                    </div>
+                                </div>
+                                <div class="flex text-primary-gold text-xs">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-xs text-surface-variant leading-relaxed font-light">
+                                "Best salon in Pune hands down! Santino gave me the sharpest razor fade and beard shaping. Super premium vibe and first-class hospitality."
+                            </p>
+                        </div>
+
+                        <!-- Review 3 -->
+                        <div class="review-card-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-9 h-9 rounded-full bg-burnished-copper/20 border border-burnished-copper text-primary-gold flex items-center justify-center font-bold text-sm">
+                                        A
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold text-xs text-warm-ivory">Ananya Kulkarni</h5>
+                                        <span class="text-[10px] text-surface-variant">3 weeks ago · NIBM Road</span>
+                                    </div>
+                                </div>
+                                <div class="flex text-primary-gold text-xs">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-xs text-surface-variant leading-relaxed font-light">
+                                "Ana did my bridal makeup and hair styling for my wedding reception. Everyone was complimenting my look! Thank you Ana &amp; Santino for making my big day so special!"
+                            </p>
+                        </div>
+
+                        <!-- Review 4 -->
+                        <div class="review-card-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-9 h-9 rounded-full bg-burnished-copper/20 border border-burnished-copper text-primary-gold flex items-center justify-center font-bold text-sm">
+                                        V
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold text-xs text-warm-ivory">Vikramaditya Deshmukh</h5>
+                                        <span class="text-[10px] text-surface-variant">1 month ago · Salunke Vihar</span>
+                                    </div>
+                                </div>
+                                <div class="flex text-primary-gold text-xs">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-xs text-surface-variant leading-relaxed font-light">
+                                "Clean, hygienic, luxury interiors, and top-tier stylists. The hair spa and scalp treatment was so relaxing. 5 stars all the way!"
+                            </p>
+                        </div>
+
+                        <!-- Review 5 -->
+                        <div class="review-card-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-9 h-9 rounded-full bg-burnished-copper/20 border border-burnished-copper text-primary-gold flex items-center justify-center font-bold text-sm">
+                                        S
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold text-xs text-warm-ivory">Sneha Mehta</h5>
+                                        <span class="text-[10px] text-surface-variant">1 month ago · Oxford Village</span>
+                                    </div>
+                                </div>
+                                <div class="flex text-primary-gold text-xs">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-xs text-surface-variant leading-relaxed font-light">
+                                "Got gel nail extensions and a Japanese Kanpeiki facial from Ana. Incredible attention to detail. Definitely my go-to salon in Salunke Vihar now!"
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 7. CONTACT & LOCATION MAP SECTION -->
+        <section id="contact" class="stack-section py-24 px-6 md:px-16 flex items-center justify-center">
+            <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-5 reveal-fade-left">
+                    <span class="badge-gold mb-3">Salon Location</span>
+                    <h2 class="font-heading text-3xl md:text-4xl text-warm-ivory mb-6">
+                        Visit Our <span class="text-primary-gold italic">Sanctuary</span>
+                    </h2>
+
+                    <div class="space-y-6 text-sm">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full border border-burnished-copper/40 flex items-center justify-center text-primary-gold flex-shrink-0">
+                                <span class="material-symbols-outlined">location_on</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-warm-ivory uppercase tracking-wider text-xs">Address</h4>
+                                <p class="text-surface-variant mt-1">
+                                    Crystal Castle, Corner, Oxford Village Society Road (next to Clover Citadel), Salunkhe Vihar Society, Wanowrie, Pune, Maharashtra 411040
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full border border-burnished-copper/40 flex items-center justify-center text-primary-gold flex-shrink-0">
+                                <span class="material-symbols-outlined">call</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-warm-ivory uppercase tracking-wider text-xs">Phone Reservations</h4>
+                                <div class="mt-1 space-y-1">
+                                    <a href="tel:+917499913972" class="text-primary-gold hover:underline block font-semibold">+91 74999 13972</a>
+                                    <a href="tel:+918390000497" class="text-primary-gold hover:underline block font-semibold">+91 83900 00497</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 flex gap-4">
+                        <button class="btn-gold open-booking-modal text-xs py-3 px-6">
+                            Book a Service Online
+                        </button>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 reveal-fade-right">
+                    <div class="heritage-frame h-[400px] w-full rounded overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.896280459807!2d73.89886367503706!3d18.488349282598375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2ea76b6d510bd%3A0x6b6c28fcfb299e52!2sSalunke%20Vihar%20Rd%2C%20Wanowrie%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0; filter: grayscale(80%) invert(90%) contrast(120%);" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ENHANCED LUXURY FOOTER -->
+    <footer class="bg-obsidian border-t border-burnished-copper/30 pt-16 pb-10 px-6 md:px-16 text-surface-variant">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            <div class="space-y-4">
+                <a href="#" class="inline-block">
+                    <img src="assets/logo.png" alt="Hairport by Santino" class="h-12 w-auto">
+                </a>
+                <p class="text-xs leading-relaxed text-surface-variant">
+                    Buckle up for a first-class beauty experience at Salunke Vihar's premier unisex salon in Pune. Where artisanal craftsmanship meets uncompromising luxury.
+                </p>
+                <div class="pt-2 text-xs font-semibold text-primary-gold flex items-center gap-2">
+                    <i class="fas fa-clock text-burnished-copper"></i> Flight Hours: 10 AM – 9 PM Daily
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <h4 class="font-heading text-lg text-warm-ivory uppercase tracking-wider border-b border-burnished-copper/30 pb-2 inline-block">Quick Links</h4>
+                <ul class="space-y-2 text-xs uppercase tracking-widest">
+                    <li><a href="#about" class="hover:text-primary-gold transition-colors">About Sanctuary</a></li>
+                    <li><a href="#services" class="hover:text-primary-gold transition-colors">Our Services</a></li>
+                    <li><a href="#artisans" class="hover:text-primary-gold transition-colors">Master Artisans</a></li>
+                    <li><a href="#instagram-feed" class="hover:text-primary-gold transition-colors">Instagram Feed</a></li>
+                    <li><a href="#" class="open-rate-card hover:text-primary-gold transition-colors" data-page="0">Rate Card Lightbox</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-4">
+                <h4 class="font-heading text-lg text-warm-ivory uppercase tracking-wider border-b border-burnished-copper/30 pb-2 inline-block">Legal &amp; Policies</h4>
+                <ul class="space-y-2 text-xs uppercase tracking-widest">
+                    <li><a href="#" class="open-terms-modal text-warm-ivory hover:text-primary-gold transition-colors flex items-center gap-1.5"><span class="material-symbols-outlined text-sm text-burnished-copper">gavel</span> Terms &amp; Conditions</a></li>
+                    <li><a href="#" class="open-privacy-modal text-warm-ivory hover:text-primary-gold transition-colors flex items-center gap-1.5"><span class="material-symbols-outlined text-sm text-burnished-copper">lock</span> Privacy Policy</a></li>
+                    <li><a href="https://g.page/r/CTQC7tZf96LGEAE/review" target="_blank" class="hover:text-primary-gold transition-colors flex items-center gap-1"><i class="fab fa-google text-xs text-primary-gold"></i> Rate Us on Google</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-4">
+                <h4 class="font-heading text-lg text-warm-ivory uppercase tracking-wider border-b border-burnished-copper/30 pb-2 inline-block">Connect With Us</h4>
+                <p class="text-xs">
+                    Crystal Castle, Oxford Village Road, Salunkhe Vihar, Wanowrie, Pune - 411040
+                </p>
+                <div class="flex flex-wrap gap-3 pt-2">
+                    <a href="https://wa.me/+917499913972" target="_blank" class="w-10 h-10 rounded-full border border-burnished-copper/40 flex items-center justify-center text-primary-gold hover:bg-burnished-copper hover:text-obsidian transition-colors" title="WhatsApp">
+                        <i class="fab fa-whatsapp text-lg"></i>
+                    </a>
+                    <a href="tel:+917499913972" class="w-10 h-10 rounded-full border border-burnished-copper/40 flex items-center justify-center text-primary-gold hover:bg-burnished-copper hover:text-obsidian transition-colors" title="Call Us">
+                        <i class="fas fa-phone-alt text-sm"></i>
+                    </a>
+                    <a href="https://www.instagram.com/santinoo_hairmafia/" target="_blank" class="w-10 h-10 rounded-full border border-burnished-copper/40 flex items-center justify-center text-primary-gold hover:bg-burnished-copper hover:text-obsidian transition-colors" title="Instagram (@santinoo_hairmafia)">
+                        <i class="fab fa-instagram text-lg"></i>
+                    </a>
+                    <a href="https://g.page/r/CTQC7tZf96LGEAE/review" target="_blank" class="w-10 h-10 rounded-full border border-burnished-copper/40 flex items-center justify-center text-primary-gold hover:bg-burnished-copper hover:text-obsidian transition-colors" title="Google Review">
+                        <i class="fab fa-google text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto border-t border-burnished-copper/20 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-surface-variant gap-4">
+            <div>
+                © 2026 <strong class="text-warm-ivory">HAIRPORT BY SANTINO</strong>. ALL RIGHTS RESERVED. SALUNKE VIHAR, PUNE.
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="#" class="open-terms-modal hover:text-primary-gold">Terms</a>
+                <a href="#" class="open-privacy-modal hover:text-primary-gold">Privacy</a>
+                <a href="https://www.instagram.com/santinoo_hairmafia/" target="_blank" class="hover:text-primary-gold">@santinoo_hairmafia</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- TERMS & CONDITIONS MODAL -->
+    <div id="terms-modal" class="modal-overlay">
+        <div class="modal-card p-8 max-w-2xl text-left">
+            <button id="close-terms-modal" class="absolute top-6 right-6 text-surface-variant hover:text-primary-gold text-2xl">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+
+            <div class="inline-flex items-center gap-2 badge-gold mb-3">
+                <span class="material-symbols-outlined text-sm">gavel</span> Legal Policy
+            </div>
+            <h3 class="font-heading text-3xl text-warm-ivory mb-6">Terms &amp; Conditions</h3>
+
+            <div class="space-y-4 text-xs leading-relaxed text-surface-variant overflow-y-auto max-h-[60vh] pr-2">
+                <h4 class="text-sm font-semibold text-primary-gold uppercase">1. Appointment &amp; Reservations</h4>
+                <p>Appointments at Hairport by Santino (Salunke Vihar, Pune) can be made online or by telephone.</p>
+                <h4 class="text-sm font-semibold text-primary-gold uppercase">2. Cancellation &amp; Rescheduling</h4>
+                <p>We request at least 2 hours advance notice for cancellations.</p>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-burnished-copper/20 flex justify-end">
+                <button onclick="document.getElementById('terms-modal').classList.remove('active'); document.body.style.overflow='';" class="btn-gold text-xs py-2.5 px-6">
+                    I Understand
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRIVACY POLICY MODAL -->
+    <div id="privacy-modal" class="modal-overlay">
+        <div class="modal-card p-8 max-w-2xl text-left">
+            <button id="close-privacy-modal" class="absolute top-6 right-6 text-surface-variant hover:text-primary-gold text-2xl">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+
+            <div class="inline-flex items-center gap-2 badge-gold mb-3">
+                <span class="material-symbols-outlined text-sm">lock</span> Confidentiality
+            </div>
+            <h3 class="font-heading text-3xl text-warm-ivory mb-6">Privacy Policy</h3>
+
+            <div class="space-y-4 text-xs leading-relaxed text-surface-variant overflow-y-auto max-h-[60vh] pr-2">
+                <h4 class="text-sm font-semibold text-primary-gold uppercase">1. Information We Collect</h4>
+                <p>We collect essential appointment details (name, phone, service).</p>
+                <h4 class="text-sm font-semibold text-primary-gold uppercase">2. Use of Information</h4>
+                <p>Data is strictly used to confirm booking slots.</p>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-burnished-copper/20 flex justify-end">
+                <button onclick="document.getElementById('privacy-modal').classList.remove('active'); document.body.style.overflow='';" class="btn-gold text-xs py-2.5 px-6">
+                    Accept &amp; Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- LIGHTBOX MODAL FOR RATE CARDS -->
+    <div id="rate-card-modal" class="lightbox-modal">
+        <div class="relative">
+            <button id="close-rate-modal" class="absolute -top-12 right-0 text-warm-ivory text-3xl hover:text-primary-gold">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <img id="rate-card-img" src="assets/rate1.jpg" alt="Hairport Rate Card" class="lightbox-content">
+            <button id="rate-prev" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-obsidian/80 text-primary-gold border border-burnished-copper flex items-center justify-center">
+                <span class="material-symbols-outlined">chevron_left</span>
+            </button>
+            <button id="rate-next" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-obsidian/80 text-primary-gold border border-burnished-copper flex items-center justify-center">
+                <span class="material-symbols-outlined">chevron_right</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- 3-STEP APPOINTMENT BOOKING MODAL -->
+    <div id="booking-modal" class="modal-overlay">
+        <div class="modal-card p-8">
+            <button id="close-booking-modal" class="absolute top-6 right-6 text-surface-variant hover:text-primary-gold text-2xl">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+
+            <div id="booking-step-1">
+                <span class="badge-gold mb-2">Step 1 of 2</span>
+                <h3 class="font-heading text-2xl text-warm-ivory mb-6">Select Your Service</h3>
+                <div class="form-group">
+                    <label class="form-label">Category</label>
+                    <select id="bk-service" class="form-select" required>
+                        <option value="Bespoke Haircut &amp; Styling">Bespoke Haircut &amp; Styling</option>
+                        <option value="Taninoplastia Hair Smoothening">Taninoplastia Organic Smoothening</option>
+                        <option value="Radiant Facial &amp; Skin Care">Radiant Facial &amp; Skin Care</option>
+                        <option value="Bridal &amp; Occasion Glam">Bridal &amp; Occasion Glam</option>
+                        <option value="Nail Art &amp; Extensions">Nail Art &amp; Extensions</option>
+                    </select>
+                </div>
+                <button id="next-step-1" class="w-full btn-gold py-3 text-xs mt-4">Continue to Schedule</button>
+            </div>
+
+            <div id="booking-step-2" class="hidden">
+                <span class="badge-gold mb-2">Step 2 of 2</span>
+                <h3 class="font-heading text-2xl text-warm-ivory mb-6">Schedule &amp; Client Info</h3>
+                <form id="booking-form" class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="form-group">
+                            <label class="form-label">Client Name *</label>
+                            <input id="bk-name" type="text" class="form-input" placeholder="Your Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Phone Number *</label>
+                            <input type="tel" class="form-input" placeholder="+91 98765 43210" required>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="form-group">
+                            <label class="form-label">Preferred Date *</label>
+                            <input id="bk-date" type="date" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Preferred Slot *</label>
+                            <select id="bk-time" class="form-select" required>
+                                <option>10:30 AM (Morning Slot)</option>
+                                <option>02:00 PM (Afternoon Slot)</option>
+                                <option>05:30 PM (Evening Slot)</option>
+                                <option>08:00 PM (Night Express Slot)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 pt-4">
+                        <button type="button" id="prev-step-2" class="btn-outline-gold w-1/3 text-xs py-3">Back</button>
+                        <button type="submit" class="btn-gold w-2/3 text-xs py-3">Confirm Appointment</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="boarding-pass-result" class="hidden text-center py-6">
+                <div class="w-16 h-16 rounded-full bg-burnished-copper/20 border border-primary-gold text-primary-gold flex items-center justify-center mx-auto mb-4">
+                    <span class="material-symbols-outlined text-3xl">check_circle</span>
+                </div>
+                <span class="badge-gold mb-2">Service Booked!</span>
+                <h3 class="font-heading text-3xl text-warm-ivory mb-2">BEAUTY BOARDING PASS</h3>
+                <p class="text-xs text-surface-variant mb-6">Your appointment is booked at Hairport by Santino, Salunke Vihar, Pune.</p>
+
+                <div class="glass-panel p-6 border border-burnished-copper text-left space-y-3 font-mono text-xs mb-6">
+                    <div class="flex justify-between border-b border-burnished-copper/20 pb-2">
+                        <span class="text-burnished-copper uppercase">Client Name:</span>
+                        <span id="pass-passenger-name" class="font-bold text-warm-ivory">SANTINO CLIENT</span>
+                    </div>
+                    <div class="flex justify-between border-b border-burnished-copper/20 pb-2">
+                        <span class="text-burnished-copper uppercase">Service:</span>
+                        <span id="pass-service-name" class="text-warm-ivory">Bespoke Haircut</span>
+                    </div>
+                    <div class="flex justify-between border-b border-burnished-copper/20 pb-2">
+                        <span class="text-burnished-copper uppercase">Appointment Slot:</span>
+                        <span id="pass-date-time" class="text-warm-ivory">2026-08-10 | 10:30 AM</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-burnished-copper uppercase">Confirmation Code:</span>
+                        <span id="pass-pnr" class="font-bold text-primary-gold">HP-984210</span>
+                    </div>
+                </div>
+
+                <a href="tel:+917499913972" class="btn-gold text-xs py-3 px-8 inline-block">
+                    <i class="fas fa-phone mr-2"></i> Call Salon to Confirm
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

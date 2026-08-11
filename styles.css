@@ -1,0 +1,720 @@
+/* ==========================================================================
+   HAIRPORT BY SANTINO - STICKY CARD STACKING & GOOGLE REVIEWS FEED STYLES
+   Aesthetics: Deep Obsidian, Burnished Copper, Warm Gold, Glassmorphic Review Cards
+   Feature: Split Layout with Left "Give Feedback" CTA & Right Scrollable Google Reviews
+   ========================================================================== */
+
+:root {
+    --bg-obsidian: #0e0e0e;
+    --bg-surface: #131313;
+    --bg-surface-low: #1b1b1b;
+    --bg-surface-high: #2a2a2a;
+    --bg-glass: rgba(18, 18, 18, 0.92);
+    
+    --color-burnished-copper: #BA8945;
+    --color-primary-gold: #F4BD73;
+    --color-muted-gold: #8E6935;
+    --color-warm-ivory: #FDFCF8;
+    --color-on-surface-variant: #d4c4b4;
+    --color-outline: #9c8e80;
+    
+    /* Weighted Luxury Easing Curves */
+    --ease-luxury: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-bounce-soft: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --transition-fast: 0.3s var(--ease-luxury);
+    --transition-smooth: 0.6s var(--ease-luxury);
+    --transition-slow: 0.9s var(--ease-luxury);
+}
+
+/* Base Reset & Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-obsidian);
+    color: var(--color-warm-ivory);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Selection */
+::selection {
+    background: var(--color-burnished-copper);
+    color: #000;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-obsidian);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color-burnished-copper);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary-gold);
+}
+
+/* --------------------------------------------------------------------------
+   STICKY SECTION CARD STACKING & OVERLAPPING OVERLAY STYLES
+   -------------------------------------------------------------------------- */
+
+.stack-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.stack-section {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--bg-obsidian);
+    transform-origin: center top;
+    will-change: transform, opacity;
+    box-shadow: 0 -20px 50px rgba(0, 0, 0, 0.9);
+    border-top: 1px solid rgba(186, 137, 69, 0.3);
+}
+
+#sec-hero {
+    z-index: 10;
+    border-top: none;
+}
+
+#about {
+    z-index: 20;
+    background-color: #121212;
+}
+
+#services {
+    z-index: 30;
+    background-color: #0e0e0e;
+}
+
+#artisans {
+    z-index: 40;
+    background-color: #141414;
+}
+
+#instagram-feed {
+    z-index: 45;
+    background-color: #111111;
+}
+
+#sec-review {
+    z-index: 50;
+    background-color: #101010;
+}
+
+#contact {
+    z-index: 60;
+    background-color: #0e0e0e;
+}
+
+footer {
+    z-index: 70;
+    position: relative;
+}
+
+/* --------------------------------------------------------------------------
+   GOOGLE REVIEWS FEED STYLES
+   -------------------------------------------------------------------------- */
+.google-reviews-scroll {
+    max-height: 460px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.google-reviews-scroll::-webkit-scrollbar {
+    width: 6px;
+}
+
+.google-reviews-scroll::-webkit-scrollbar-thumb {
+    background: var(--color-burnished-copper);
+    border-radius: 3px;
+}
+
+.review-card-item {
+    background: rgba(19, 19, 19, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(186, 137, 69, 0.25);
+    border-radius: 6px;
+    padding: 18px 20px;
+    transition: transform 0.4s var(--ease-luxury), border-color 0.3s ease, box-shadow 0.4s ease;
+}
+
+.review-card-item:hover {
+    transform: translateX(6px);
+    border-color: var(--color-primary-gold);
+    box-shadow: 0 10px 25px rgba(244, 189, 115, 0.15);
+}
+
+/* --------------------------------------------------------------------------
+   SINGLE-ROW HORIZONTAL SCROLLABLE SERVICES STYLES
+   -------------------------------------------------------------------------- */
+.services-row-scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: 10px 4px 20px 4px;
+}
+
+.services-row-scroll::-webkit-scrollbar {
+    height: 6px;
+}
+
+.services-row-scroll::-webkit-scrollbar-thumb {
+    background: var(--color-burnished-copper);
+    border-radius: 3px;
+}
+
+.services-row-scroll > .glass-panel {
+    flex: 0 0 280px;
+    scroll-snap-align: start;
+}
+
+@media (min-width: 640px) {
+    .services-row-scroll > .glass-panel {
+        flex: 0 0 320px;
+    }
+}
+
+.svc-arrow-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(14, 14, 14, 0.85);
+    border: 1px solid var(--color-burnished-copper);
+    color: var(--color-primary-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s var(--ease-luxury), background 0.3s ease, color 0.3s ease;
+    backdrop-filter: blur(8px);
+    z-index: 20;
+}
+
+.svc-arrow-btn:hover {
+    background: var(--color-burnished-copper);
+    color: #000;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(244, 189, 115, 0.4);
+}
+
+/* --------------------------------------------------------------------------
+   INSTAGRAM REELS SHOWCASE STYLES
+   -------------------------------------------------------------------------- */
+.insta-profile-bar {
+    background: rgba(19, 19, 19, 0.8);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(186, 137, 69, 0.3);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 32px;
+}
+
+.insta-reel-card {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid rgba(186, 137, 69, 0.35);
+    transition: transform 0.5s var(--ease-luxury), border-color 0.4s ease, box-shadow 0.5s ease;
+    background: #000;
+}
+
+.insta-reel-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: var(--color-primary-gold);
+    box-shadow: 0 20px 40px rgba(244, 189, 115, 0.3);
+}
+
+.insta-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.4) 40%, rgba(14, 14, 14, 0.95) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+    transition: background 0.4s ease;
+}
+
+.insta-reel-card:hover .insta-overlay {
+    background: linear-gradient(180deg, rgba(186, 137, 69, 0.25) 0%, rgba(0, 0, 0, 0.5) 40%, rgba(14, 14, 14, 0.98) 100%);
+}
+
+.insta-play-badge {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(14, 14, 14, 0.75);
+    border: 1px solid var(--color-primary-gold);
+    color: var(--color-primary-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+    transition: transform 0.4s var(--ease-bounce-soft), background 0.4s ease, color 0.4s ease;
+}
+
+.insta-reel-card:hover .insta-play-badge {
+    transform: scale(1.18);
+    background: var(--color-burnished-copper);
+    color: #000;
+}
+
+/* --------------------------------------------------------------------------
+   SCROLL OVERLAY INDICATORS
+   -------------------------------------------------------------------------- */
+
+#scroll-progress-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-burnished-copper), var(--color-primary-gold));
+    width: 0%;
+    z-index: 10000;
+    box-shadow: 0 0 12px rgba(244, 189, 115, 0.9);
+    transition: width 0.1s linear;
+}
+
+#scroll-ambient-vignette {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9998;
+    background: radial-gradient(circle at 50% 50%, transparent 40%, rgba(14, 14, 14, 0.6) 90%);
+    mix-blend-mode: multiply;
+    transition: background 0.8s var(--ease-luxury);
+}
+
+#parallax-light-beams {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    background: 
+        radial-gradient(ellipse at 15% 30%, rgba(186, 137, 69, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 85% 70%, rgba(244, 189, 115, 0.06) 0%, transparent 60%);
+    will-change: transform;
+    transition: transform 0.2s ease-out;
+}
+
+#cursor-spotlight {
+    position: fixed;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(186, 137, 69, 0.08) 0%, rgba(244, 189, 115, 0.03) 40%, transparent 70%);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: transform 0.1s ease-out, opacity 0.3s ease;
+    opacity: 0;
+}
+
+body:hover #cursor-spotlight {
+    opacity: 1;
+}
+
+/* Typography Utility Classes */
+.font-heading {
+    font-family: var(--font-heading);
+}
+
+.text-gold {
+    color: var(--color-primary-gold);
+}
+
+.text-copper {
+    color: var(--color-burnished-copper);
+}
+
+.text-ivory {
+    color: var(--color-warm-ivory);
+}
+
+.text-muted-variant {
+    color: var(--color-on-surface-variant);
+}
+
+/* Heritage Framing */
+.heritage-frame {
+    position: relative;
+    padding: 6px;
+    transition: transform 0.5s var(--ease-luxury);
+}
+
+.heritage-frame::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(186, 137, 69, 0.35);
+    pointer-events: none;
+    z-index: 2;
+    transition: var(--transition-smooth);
+}
+
+.heritage-frame::after {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    border: 1px solid rgba(186, 137, 69, 0.7);
+    pointer-events: none;
+    z-index: 2;
+    transition: var(--transition-smooth);
+}
+
+.heritage-frame:hover::after {
+    border-color: var(--color-primary-gold);
+    box-shadow: 0 0 20px rgba(244, 189, 115, 0.3);
+}
+
+/* Glassmorphism Panels with Shimmer Sweep */
+.glass-panel {
+    background: var(--bg-glass);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(186, 137, 69, 0.25);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    transform-style: preserve-3d;
+    will-change: transform;
+    position: relative;
+    overflow: hidden;
+}
+
+.glass-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(244, 189, 115, 0.08), transparent);
+    transform: skewX(-20deg);
+    transition: 0.8s var(--ease-luxury);
+    pointer-events: none;
+}
+
+.glass-panel:hover::before {
+    left: 150%;
+}
+
+.glass-panel-hover {
+    transition: transform 0.5s var(--ease-luxury), border-color 0.4s ease, box-shadow 0.5s ease;
+}
+
+.glass-panel-hover:hover {
+    border-color: var(--color-burnished-copper);
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 30px 60px rgba(186, 137, 69, 0.22);
+}
+
+/* Magnetic Buttons & Interactive Shimmer */
+.btn-gold {
+    background: linear-gradient(135deg, var(--color-burnished-copper), #d49e52);
+    color: #0e0e0e;
+    font-family: var(--font-body);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s var(--ease-luxury), background 0.4s ease, box-shadow 0.4s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 4px 20px rgba(186, 137, 69, 0.3);
+}
+
+.btn-gold::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: 0.6s;
+}
+
+.btn-gold:hover::before {
+    left: 100%;
+}
+
+.btn-gold:hover {
+    background: linear-gradient(135deg, var(--color-primary-gold), var(--color-burnished-copper));
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 35px rgba(244, 189, 115, 0.45);
+}
+
+.btn-outline-gold {
+    background: transparent;
+    color: var(--color-primary-gold);
+    font-family: var(--font-body);
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 13px 30px;
+    border: 1px solid rgba(186, 137, 69, 0.6);
+    border-radius: 2px;
+    cursor: pointer;
+    transition: transform 0.4s var(--ease-luxury), background 0.4s ease, border-color 0.4s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-outline-gold:hover {
+    background: rgba(186, 137, 69, 0.15);
+    border-color: var(--color-primary-gold);
+    color: var(--color-warm-ivory);
+    transform: translateY(-3px);
+}
+
+/* Animations & Reveal States */
+.reveal-fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.9s var(--ease-luxury), transform 0.9s var(--ease-luxury);
+}
+
+.reveal-fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-fade-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.9s var(--ease-luxury), transform 0.9s var(--ease-luxury);
+}
+
+.reveal-fade-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-fade-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.9s var(--ease-luxury), transform 0.9s var(--ease-luxury);
+}
+
+.reveal-fade-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-zoom-in {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.9s var(--ease-luxury), transform 0.9s var(--ease-luxury);
+}
+
+.reveal-zoom-in.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Floating Gold Particle Canvas */
+#gold-particles-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Hero Carousel Parallax */
+.hero-carousel-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 650px;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transform: scale(1.12);
+    transition: opacity 1.4s ease-in-out, transform 2.2s var(--ease-luxury);
+    pointer-events: none;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+.carousel-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(14, 14, 14, 0.75) 0%, rgba(14, 14, 14, 0.4) 40%, rgba(14, 14, 14, 0.95) 100%);
+    z-index: 2;
+}
+
+.carousel-progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background: var(--color-burnished-copper);
+    width: 0%;
+    z-index: 20;
+    transition: width 0.1s linear;
+}
+
+/* Lightbox Modal */
+.lightbox-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(15px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition-smooth);
+}
+
+.lightbox-modal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lightbox-content {
+    max-width: 90vw;
+    max-height: 85vh;
+    border: 1px solid var(--color-burnished-copper);
+    box-shadow: 0 0 50px rgba(186, 137, 69, 0.3);
+    border-radius: 4px;
+}
+
+/* Booking Modal */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(12px);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition-smooth);
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--color-burnished-copper);
+    max-width: 650px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 4px;
+    position: relative;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+    transform: translateY(40px);
+    transition: transform 0.6s var(--ease-luxury), opacity 0.6s var(--ease-luxury);
+}
+
+.modal-overlay.active .modal-card {
+    transform: translateY(0);
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-burnished-copper);
+    margin-bottom: 8px;
+}
+
+.form-input, .form-select, .form-textarea {
+    width: 100%;
+    background: var(--bg-surface-low);
+    border: 1px solid rgba(186, 137, 69, 0.3);
+    color: var(--color-warm-ivory);
+    padding: 12px 16px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    border-radius: 2px;
+    transition: var(--transition-fast);
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+    outline: none;
+    border-color: var(--color-primary-gold);
+    box-shadow: 0 0 10px rgba(244, 189, 115, 0.2);
+}
+
+/* Pulse Glow & Badges */
+.badge-gold {
+    background: rgba(186, 137, 69, 0.15);
+    border: 1px solid var(--color-burnished-copper);
+    color: var(--color-primary-gold);
+    padding: 6px 14px;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    display: inline-block;
+}
+
+.pulse-glow {
+    animation: pulseGlow 2.5s infinite alternate;
+}
+
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 10px rgba(186, 137, 69, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 25px rgba(244, 189, 115, 0.5);
+    }
+}
