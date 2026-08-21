@@ -71,7 +71,7 @@
          ========================================================================== -->
     <aside class="floating-deck" aria-label="Quick Contact Actions">
         <!-- WhatsApp -->
-        <a href="https://wa.me/917499913972" target="_blank" rel="noopener noreferrer" class="floating-btn" title="Chat on WhatsApp">
+        <a href="https://api.whatsapp.com/send?phone=917499913972&text=Hello%20Hairport%20Salon!%20I%20would%20like%20to%20inquire%20about%20your%20services%20and%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="floating-btn" title="Chat on WhatsApp">
             <img src="assets/icon-whatsapp.png" alt="WhatsApp">
             <span class="floating-tooltip">WhatsApp Us</span>
         </a>
@@ -191,28 +191,64 @@
             </div>
 
             <!-- Content Overlay -->
-            <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto flex flex-col items-center py-16">
-                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-primary-container/40 bg-charcoal/60 backdrop-blur-md text-primary-container text-[11px] font-bold tracking-[0.2em] uppercase mb-6 shadow-sm">
+            <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto flex flex-col items-center py-14 sm:py-16">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary-container/50 bg-charcoal/80 backdrop-blur-md text-primary-container text-[11px] font-bold tracking-[0.22em] uppercase mb-5 shadow-sm">
                     <span class="material-symbols-outlined text-sm rotate-[-45deg]">flight_takeoff</span>
-                    SALUNKE VIHAR, PUNE
+                    HAUTE COIFFURE · SALUNKE VIHAR, PUNE
                 </div>
 
-                <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-surface-cream uppercase leading-[1.1] mb-6">
+                <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-surface-cream uppercase leading-[1.1] mb-5">
                     WHERE STYLE <br>
-                    <span class="italic font-normal text-primary-container">TAKES FLIGHT</span>
+                    <span class="italic font-normal hero-gold-text">TAKES FLIGHT</span>
                 </h1>
 
-                <p class="font-body text-base sm:text-lg text-surface-cream/80 max-w-2xl font-light mb-4 leading-relaxed">
+                <p class="font-body text-base sm:text-lg text-surface-cream/80 max-w-2xl font-light mb-5 leading-relaxed">
                     Buckle up for a first-class beauty experience at Pune's premier luxury unisex salon. Precision grooming crafted by master stylist <strong class="text-surface-cream font-semibold">Santinoo</strong> and our expert crew.
                 </p>
+
+                <!-- VIP Trust & Credentials Bar inside Hero Carousel (Translucent Luxury Glass Style) -->
+                <div class="w-full max-w-3xl glass-panel-luxury rounded-xl py-3 px-3 sm:py-4 sm:px-5 grid grid-cols-2 md:grid-cols-4 gap-2.5 sm:gap-4 text-center mt-3 sm:mt-5">
+                    <!-- Stat 1: Google Rating -->
+                    <div class="border-r border-primary-container/20 last:border-r-0 px-1.5 sm:px-2 flex flex-col items-center justify-center">
+                        <div class="flex items-center gap-1.5 mb-0.5">
+                            <span class="font-display text-xl sm:text-2xl font-bold text-white leading-none" data-google-rating>4.8</span>
+                            <div class="flex text-amber-400 text-[10px] sm:text-xs">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                        <span class="text-[10px] sm:text-xs font-bold text-surface-cream uppercase tracking-wider block leading-tight">1000+ REVIEWS</span>
+                        <span class="text-[9px] sm:text-[10px] text-primary-container font-medium tracking-normal block leading-tight">Google Verified</span>
+                    </div>
+
+                    <!-- Stat 2: Experience -->
+                    <div class="md:border-r border-primary-container/20 px-1.5 sm:px-2 flex flex-col items-center justify-center">
+                        <span class="font-display text-xl sm:text-2xl font-bold hero-gold-text mb-0.5 leading-none">15+ YRS</span>
+                        <span class="text-[10px] sm:text-xs font-bold text-surface-cream uppercase tracking-wider block leading-tight">MASTER ARTISTRY</span>
+                        <span class="text-[9px] sm:text-[10px] text-primary-container font-medium tracking-normal block leading-tight">Celebrity Stylists</span>
+                    </div>
+
+                    <!-- Stat 3: Organic Treatments -->
+                    <div class="border-r border-primary-container/20 last:border-r-0 px-1.5 sm:px-2 flex flex-col items-center justify-center">
+                        <span class="font-display text-xl sm:text-2xl font-bold text-white mb-0.5 leading-none">100%</span>
+                        <span class="text-[10px] sm:text-xs font-bold text-surface-cream uppercase tracking-wider block leading-tight">ORGANIC BOTOX</span>
+                        <span class="text-[9px] sm:text-[10px] text-primary-container font-medium tracking-normal block leading-tight">Taninoplastia</span>
+                    </div>
+
+                    <!-- Stat 4: VIP Lounge -->
+                    <div class="px-1.5 sm:px-2 flex flex-col items-center justify-center">
+                        <span class="font-display text-xl sm:text-2xl font-bold hero-gold-text mb-0.5 leading-none">VIP</span>
+                        <span class="text-[10px] sm:text-xs font-bold text-surface-cream uppercase tracking-wider block leading-tight">UNISEX LOUNGE</span>
+                        <span class="text-[9px] sm:text-[10px] text-primary-container font-medium tracking-normal block leading-tight">Salunke Vihar, Pune</span>
+                    </div>
+                </div>
             </div>
 
-            <!-- Slide Navigation Buttons -->
-            <div class="absolute bottom-6 right-6 z-20 hidden md:flex items-center gap-3">
-                <button id="hero-prev-btn" class="w-10 h-10 rounded-full border border-primary-container/40 bg-charcoal/70 text-primary-container hover:bg-primary-container hover:text-charcoal flex items-center justify-center transition-colors" aria-label="Previous Slide">
+            <!-- Slide Navigation Buttons (Left Side) -->
+            <div class="absolute bottom-6 left-6 z-20 hidden md:flex items-center gap-3">
+                <button id="hero-prev-btn" class="w-10 h-10 rounded-full border border-primary-container/40 bg-charcoal/70 text-primary-container hover:bg-primary-container hover:text-charcoal flex items-center justify-center transition-colors shadow" aria-label="Previous Slide">
                     <span class="material-symbols-outlined text-sm">arrow_back</span>
                 </button>
-                <button id="hero-next-btn" class="w-10 h-10 rounded-full border border-primary-container/40 bg-charcoal/70 text-primary-container hover:bg-primary-container hover:text-charcoal flex items-center justify-center transition-colors" aria-label="Next Slide">
+                <button id="hero-next-btn" class="w-10 h-10 rounded-full border border-primary-container/40 bg-charcoal/70 text-primary-container hover:bg-primary-container hover:text-charcoal flex items-center justify-center transition-colors shadow" aria-label="Next Slide">
                     <span class="material-symbols-outlined text-sm">arrow_forward</span>
                 </button>
             </div>
@@ -292,7 +328,7 @@
 
                         <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-on-surface leading-tight">
                             First-Class Grooming <br>
-                            <span class="italic font-normal text-primary">Mastery in Every Detail</span>
+                            <span class="italic font-normal gold-gradient-text">Mastery in Every Detail</span>
                         </h2>
 
                         <div class="w-16 h-0.5 bg-border-bronze"></div>
@@ -341,13 +377,16 @@
         <!-- ==========================================================================
              SECTION 4: SERVICES (Horizontal Scroll + Gender Tabs)
              ========================================================================== -->
+        <!-- ==========================================================================
+             SECTION 4: SERVICES (Horizontal Scroll + Gender Tabs)
+             ========================================================================== -->
         <section id="services" class="py-20 lg:py-28 w-full bg-surface-cream border-y border-border-bronze/20 overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <!-- Section Intro & Arrow Controls -->
                 <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-6">
                     <div>
-                        <span class="text-[11px] font-bold uppercase tracking-[0.2em] text-primary block mb-2">The Hangar Menu</span>
-                        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-on-surface">Bespoke Services</h2>
+                        <span class="text-[11px] font-bold uppercase tracking-[0.22em] text-primary block mb-2">The Hangar Menu</span>
+                        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-on-surface">Bespoke <span class="italic font-normal gold-gradient-text">Services</span></h2>
                         <p class="text-on-surface-variant text-sm mt-2 max-w-xl">
                             Swipe horizontally to explore tailored haircuts, organic hair smoothing, skincare, and nail artistry.
                         </p>
@@ -380,31 +419,34 @@
                 <!-- 1. MEN SERVICES (Horizontal Scroll Row) -->
                 <div id="services-men" class="service-tab-pane service-scroll-container flex overflow-x-auto hide-scrollbar gap-6 pb-6 pt-2">
                     <!-- Service 1 -->
-                    <article class="service-card-item min-w-[280px] sm:min-w-[300px] w-[280px] sm:w-[300px] flex-shrink-0 bg-surface-container-lowest border border-border-bronze/25 rounded-lg overflow-hidden group shadow-sm gold-glow-hover flex flex-col justify-between">
+                    <article class="service-card-item card-shimmer min-w-[280px] sm:min-w-[300px] w-[280px] sm:w-[300px] flex-shrink-0 bg-surface-container-lowest border border-border-bronze/25 rounded-lg overflow-hidden group shadow-sm gold-glow-hover flex flex-col justify-between">
                         <div>
                             <div class="h-48 relative overflow-hidden">
                                 <img src="assets/men_haircut.jpg" alt="Men Haircut & Styling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                                <div class="absolute top-3 left-3 bg-charcoal/80 text-primary-container text-[10px] font-bold px-2 py-0.5 rounded tracking-widest backdrop-blur-sm">01</div>
                                 <div class="absolute top-3 right-3 bg-surface-container-lowest/95 backdrop-blur-md px-2.5 py-1 rounded border border-border-bronze/30 text-[10px] font-bold text-primary tracking-wider">
                                     45 MIN
                                 </div>
                             </div>
                             <div class="p-5">
+                                <div class="inline-block text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-primary/10 text-primary mb-2">Signature Cut</div>
                                 <h3 class="font-display text-lg font-bold text-on-surface">Bespoke Haircut</h3>
                                 <p class="text-xs text-on-surface-variant mt-1.5 leading-relaxed">Precision fade &amp; tailored hair design by Santino.</p>
                             </div>
                         </div>
                         <div class="p-5 pt-0">
-                            <button class="open-booking-modal w-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container py-2.5 px-4 rounded text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5" data-service="Men Bespoke Haircut">
-                                Book Slot <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                            </button>
+                            <a href="https://api.whatsapp.com/send?phone=917499913972&text=Hello%20Hairport%20Salon!%20I%20would%20like%20to%20make%20a%20reservation%20for%20Men%20Bespoke%20Haircut." target="_blank" rel="noopener noreferrer" class="w-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container py-2.5 px-4 rounded text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5 shadow-sm">
+                                <i class="fab fa-whatsapp text-sm"></i> Make a Reservation
+                            </a>
                         </div>
                     </article>
 
                     <!-- Service 2 -->
-                    <article class="service-card-item min-w-[280px] sm:min-w-[300px] w-[280px] sm:w-[300px] flex-shrink-0 bg-surface-container-lowest border border-border-bronze/25 rounded-lg overflow-hidden group shadow-sm gold-glow-hover flex flex-col justify-between">
+                    <article class="service-card-item card-shimmer min-w-[280px] sm:min-w-[300px] w-[280px] sm:w-[300px] flex-shrink-0 bg-surface-container-lowest border border-border-bronze/25 rounded-lg overflow-hidden group shadow-sm gold-glow-hover flex flex-col justify-between">
                         <div>
                             <div class="h-48 relative overflow-hidden">
                                 <img src="assets/men_beard.jpg" alt="Beard Grooming & Shaping" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                                <div class="absolute top-3 left-3 bg-charcoal/80 text-primary-container text-[10px] font-bold px-2 py-0.5 rounded tracking-widest backdrop-blur-sm">02</div>
                                 <div class="absolute top-3 right-3 bg-surface-container-lowest/95 backdrop-blur-md px-2.5 py-1 rounded border border-border-bronze/30 text-[10px] font-bold text-primary tracking-wider">
                                     30 MIN
                                 </div>
@@ -415,17 +457,18 @@
                             </div>
                         </div>
                         <div class="p-5 pt-0">
-                            <button class="open-booking-modal w-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container py-2.5 px-4 rounded text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5" data-service="Men Beard Grooming">
-                                Book Slot <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                            </button>
+                            <a href="https://api.whatsapp.com/send?phone=917499913972&text=Hello%20Hairport%20Salon!%20I%20would%20like%20to%20make%20a%20reservation%20for%20Men%20Beard%20Grooming." target="_blank" rel="noopener noreferrer" class="w-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container py-2.5 px-4 rounded text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5 shadow-sm">
+                                <i class="fab fa-whatsapp text-sm"></i> Make a Reservation
+                            </a>
                         </div>
                     </article>
 
                     <!-- Service 3 -->
-                    <article class="service-card-item min-w-[280px] sm:min-w-[300px] w-[280px] sm:w-[300px] flex-shrink-0 bg-surface-container-lowest border border-border-bronze/25 rounded-lg overflow-hidden group shadow-sm gold-glow-hover flex flex-col justify-between">
+                    <article class="service-card-item card-shimmer min-w-[280px] sm:min-w-[300px] w-[280px] sm:w-[300px] flex-shrink-0 bg-surface-container-lowest border border-border-bronze/25 rounded-lg overflow-hidden group shadow-sm gold-glow-hover flex flex-col justify-between">
                         <div>
                             <div class="h-48 relative overflow-hidden">
                                 <img src="assets/men_colour.jpg" alt="Men Hair Coloring" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                                <div class="absolute top-3 left-3 bg-charcoal/80 text-primary-container text-[10px] font-bold px-2 py-0.5 rounded tracking-widest backdrop-blur-sm">03</div>
                                 <div class="absolute top-3 right-3 bg-surface-container-lowest/95 backdrop-blur-md px-2.5 py-1 rounded border border-border-bronze/30 text-[10px] font-bold text-primary tracking-wider">
                                     60 MIN
                                 </div>
@@ -436,17 +479,18 @@
                             </div>
                         </div>
                         <div class="p-5 pt-0">
-                            <button class="open-booking-modal w-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container py-2.5 px-4 rounded text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5" data-service="Men Hair Coloring">
-                                Book Slot <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                            </button>
+                            <a href="https://api.whatsapp.com/send?phone=917499913972&text=Hello%20Hairport%20Salon!%20I%20would%20like%20to%20make%20a%20reservation%20for%20Men%20Hair%20Coloring." target="_blank" rel="noopener noreferrer" class="w-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container py-2.5 px-4 rounded text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5 shadow-sm">
+                                <i class="fab fa-whatsapp text-sm"></i> Make a Reservation
+                            </a>
                         </div>
                     </article>
 
                     <!-- Service 4 -->
-                    <article class="service-card-item min-w-[280px] sm:min-w-[300px] w-[280px] sm:w-[300px] flex-shrink-0 bg-surface-container-lowest border border-border-bronze/25 rounded-lg overflow-hidden group shadow-sm gold-glow-hover flex flex-col justify-between">
+                    <article class="service-card-item card-shimmer min-w-[280px] sm:min-w-[300px] w-[280px] sm:w-[300px] flex-shrink-0 bg-surface-container-lowest border border-border-bronze/25 rounded-lg overflow-hidden group shadow-sm gold-glow-hover flex flex-col justify-between">
                         <div>
                             <div class="h-48 relative overflow-hidden">
                                 <img src="assets/men_scalp.jpg" alt="Scalp Detox Treatments" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                                <div class="absolute top-3 left-3 bg-charcoal/80 text-primary-container text-[10px] font-bold px-2 py-0.5 rounded tracking-widest backdrop-blur-sm">04</div>
                                 <div class="absolute top-3 right-3 bg-surface-container-lowest/95 backdrop-blur-md px-2.5 py-1 rounded border border-border-bronze/30 text-[10px] font-bold text-primary tracking-wider">
                                     45 MIN
                                 </div>
@@ -457,17 +501,18 @@
                             </div>
                         </div>
                         <div class="p-5 pt-0">
-                            <button class="open-booking-modal w-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container py-2.5 px-4 rounded text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5" data-service="Men Scalp Care Detox">
-                                Book Slot <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                            </button>
+                            <a href="https://api.whatsapp.com/send?phone=917499913972&text=Hello%20Hairport%20Salon!%20I%20would%20like%20to%20make%20a%20reservation%20for%20Men%20Scalp%20Care%20Detox." target="_blank" rel="noopener noreferrer" class="w-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container py-2.5 px-4 rounded text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5 shadow-sm">
+                                <i class="fab fa-whatsapp text-sm"></i> Make a Reservation
+                            </a>
                         </div>
                     </article>
 
                     <!-- Service 5 -->
-                    <article class="service-card-item min-w-[280px] sm:min-w-[300px] w-[280px] sm:w-[300px] flex-shrink-0 bg-surface-container-lowest border border-border-bronze/25 rounded-lg overflow-hidden group shadow-sm gold-glow-hover flex flex-col justify-between">
+                    <article class="service-card-item card-shimmer min-w-[280px] sm:min-w-[300px] w-[280px] sm:w-[300px] flex-shrink-0 bg-surface-container-lowest border border-border-bronze/25 rounded-lg overflow-hidden group shadow-sm gold-glow-hover flex flex-col justify-between">
                         <div>
                             <div class="h-48 relative overflow-hidden">
                                 <img src="assets/men_facial.jpg" alt="Skin Facials & Cleanups" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                                <div class="absolute top-3 left-3 bg-charcoal/80 text-primary-container text-[10px] font-bold px-2 py-0.5 rounded tracking-widest backdrop-blur-sm">05</div>
                                 <div class="absolute top-3 right-3 bg-surface-container-lowest/95 backdrop-blur-md px-2.5 py-1 rounded border border-border-bronze/30 text-[10px] font-bold text-primary tracking-wider">
                                     60 MIN
                                 </div>
@@ -478,30 +523,32 @@
                             </div>
                         </div>
                         <div class="p-5 pt-0">
-                            <button class="open-booking-modal w-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container py-2.5 px-4 rounded text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5" data-service="Men Skin Facial">
-                                Book Slot <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                            </button>
+                            <a href="https://api.whatsapp.com/send?phone=917499913972&text=Hello%20Hairport%20Salon!%20I%20would%20like%20to%20make%20a%20reservation%20for%20Men%20Skin%20Facial." target="_blank" rel="noopener noreferrer" class="w-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container py-2.5 px-4 rounded text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5 shadow-sm">
+                                <i class="fab fa-whatsapp text-sm"></i> Make a Reservation
+                            </a>
                         </div>
                     </article>
 
                     <!-- Service 6 -->
-                    <article class="service-card-item min-w-[280px] sm:min-w-[300px] w-[280px] sm:w-[300px] flex-shrink-0 bg-surface-container-lowest border border-border-bronze/25 rounded-lg overflow-hidden group shadow-sm gold-glow-hover flex flex-col justify-between">
+                    <article class="service-card-item card-shimmer min-w-[280px] sm:min-w-[300px] w-[280px] sm:w-[300px] flex-shrink-0 bg-surface-container-lowest border border-border-bronze/25 rounded-lg overflow-hidden group shadow-sm gold-glow-hover flex flex-col justify-between">
                         <div>
                             <div class="h-48 relative overflow-hidden">
                                 <img src="assets/men_taninoplastia.webp" alt="Men Taninoplastia Smoothing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                                <div class="absolute top-3 left-3 bg-charcoal/80 text-primary-container text-[10px] font-bold px-2 py-0.5 rounded tracking-widest backdrop-blur-sm">06</div>
                                 <div class="absolute top-3 right-3 bg-surface-container-lowest/95 backdrop-blur-md px-2.5 py-1 rounded border border-border-bronze/30 text-[10px] font-bold text-primary tracking-wider">
                                     90 MIN
                                 </div>
                             </div>
                             <div class="p-5">
+                                <div class="inline-block text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-primary/10 text-primary mb-2">Signature Organic</div>
                                 <h3 class="font-display text-lg font-bold text-on-surface">Taninoplastia Therapy</h3>
                                 <p class="text-xs text-on-surface-variant mt-1.5 leading-relaxed">100% organic hair smoothing &amp; frizz control.</p>
                             </div>
                         </div>
                         <div class="p-5 pt-0">
-                            <button class="open-booking-modal w-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container py-2.5 px-4 rounded text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5" data-service="Men Taninoplastia">
-                                Book Slot <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                            </button>
+                            <a href="https://api.whatsapp.com/send?phone=917499913972&text=Hello%20Hairport%20Salon!%20I%20would%20like%20to%20make%20a%20reservation%20for%20Men%20Taninoplastia%20Therapy." target="_blank" rel="noopener noreferrer" class="w-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container py-2.5 px-4 rounded text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5 shadow-sm">
+                                <i class="fab fa-whatsapp text-sm"></i> Make a Reservation
+                            </a>
                         </div>
                     </article>
                 </div>
@@ -509,10 +556,11 @@
                 <!-- 2. WOMEN SERVICES (Horizontal Scroll Row) -->
                 <div id="services-women" class="service-tab-pane service-scroll-container hidden overflow-x-auto hide-scrollbar gap-6 pb-6 pt-2">
                     <!-- Women 1 -->
-                    <article class="service-card-item min-w-[280px] sm:min-w-[300px] w-[280px] sm:w-[300px] flex-shrink-0 bg-surface-container-lowest border border-border-bronze/25 rounded-lg overflow-hidden group shadow-sm gold-glow-hover flex flex-col justify-between">
+                    <article class="service-card-item card-shimmer min-w-[280px] sm:min-w-[300px] w-[280px] sm:w-[300px] flex-shrink-0 bg-surface-container-lowest border border-border-bronze/25 rounded-lg overflow-hidden group shadow-sm gold-glow-hover flex flex-col justify-between">
                         <div>
                             <div class="h-48 relative overflow-hidden">
                                 <img src="assets/women_haircut.webp" alt="Women Haircut & Styling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                                <div class="absolute top-3 left-3 bg-charcoal/80 text-primary-container text-[10px] font-bold px-2 py-0.5 rounded tracking-widest backdrop-blur-sm">01</div>
                                 <div class="absolute top-3 right-3 bg-surface-container-lowest/95 backdrop-blur-md px-2.5 py-1 rounded border border-border-bronze/30 text-[10px] font-bold text-primary tracking-wider">
                                     60 MIN
                                 </div>
@@ -523,59 +571,64 @@
                             </div>
                         </div>
                         <div class="p-5 pt-0">
-                            <button class="open-booking-modal w-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container py-2.5 px-4 rounded text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5" data-service="Women Couture Haircut">
-                                Book Slot <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                            </button>
+                            <a href="https://api.whatsapp.com/send?phone=917499913972&text=Hello%20Hairport%20Salon!%20I%20would%20like%20to%20make%20a%20reservation%20for%20Women%20Couture%20Haircut." target="_blank" rel="noopener noreferrer" class="w-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container py-2.5 px-4 rounded text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5 shadow-sm">
+                                <i class="fab fa-whatsapp text-sm"></i> Make a Reservation
+                            </a>
                         </div>
                     </article>
 
                     <!-- Women 2 -->
-                    <article class="service-card-item min-w-[280px] sm:min-w-[300px] w-[280px] sm:w-[300px] flex-shrink-0 bg-surface-container-lowest border border-border-bronze/25 rounded-lg overflow-hidden group shadow-sm gold-glow-hover flex flex-col justify-between">
+                    <article class="service-card-item card-shimmer min-w-[280px] sm:min-w-[300px] w-[280px] sm:w-[300px] flex-shrink-0 bg-surface-container-lowest border border-border-bronze/25 rounded-lg overflow-hidden group shadow-sm gold-glow-hover flex flex-col justify-between">
                         <div>
                             <div class="h-48 relative overflow-hidden">
                                 <img src="assets/women_colour.jpg" alt="Balayage & Color" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                                <div class="absolute top-3 left-3 bg-charcoal/80 text-primary-container text-[10px] font-bold px-2 py-0.5 rounded tracking-widest backdrop-blur-sm">02</div>
                                 <div class="absolute top-3 right-3 bg-surface-container-lowest/95 backdrop-blur-md px-2.5 py-1 rounded border border-border-bronze/30 text-[10px] font-bold text-primary tracking-wider">
                                     120 MIN
                                 </div>
                             </div>
                             <div class="p-5">
+                                <div class="inline-block text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-primary/10 text-primary mb-2">Masterpiece Color</div>
                                 <h3 class="font-display text-lg font-bold text-on-surface">Balayage &amp; Highlights</h3>
                                 <p class="text-xs text-on-surface-variant mt-1.5 leading-relaxed">Dimensional caramel tones, ombre, &amp; global glaze.</p>
                             </div>
                         </div>
                         <div class="p-5 pt-0">
-                            <button class="open-booking-modal w-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container py-2.5 px-4 rounded text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5" data-service="Women Balayage & Highlights">
-                                Book Slot <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                            </button>
+                            <a href="https://api.whatsapp.com/send?phone=917499913972&text=Hello%20Hairport%20Salon!%20I%20would%20like%20to%20make%20a%20reservation%20for%20Women%20Balayage%20%26%20Highlights." target="_blank" rel="noopener noreferrer" class="w-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container py-2.5 px-4 rounded text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5 shadow-sm">
+                                <i class="fab fa-whatsapp text-sm"></i> Make a Reservation
+                            </a>
                         </div>
                     </article>
 
                     <!-- Women 3 -->
-                    <article class="service-card-item min-w-[280px] sm:min-w-[300px] w-[280px] sm:w-[300px] flex-shrink-0 bg-surface-container-lowest border border-border-bronze/25 rounded-lg overflow-hidden group shadow-sm gold-glow-hover flex flex-col justify-between">
+                    <article class="service-card-item card-shimmer min-w-[280px] sm:min-w-[300px] w-[280px] sm:w-[300px] flex-shrink-0 bg-surface-container-lowest border border-border-bronze/25 rounded-lg overflow-hidden group shadow-sm gold-glow-hover flex flex-col justify-between">
                         <div>
                             <div class="h-48 relative overflow-hidden">
                                 <img src="assets/women_taninoplastia.jpg" alt="Taninoplastia Organic Hair Botox" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                                <div class="absolute top-3 left-3 bg-charcoal/80 text-primary-container text-[10px] font-bold px-2 py-0.5 rounded tracking-widest backdrop-blur-sm">03</div>
                                 <div class="absolute top-3 right-3 bg-surface-container-lowest/95 backdrop-blur-md px-2.5 py-1 rounded border border-border-bronze/30 text-[10px] font-bold text-primary tracking-wider">
                                     120 MIN
                                 </div>
                             </div>
                             <div class="p-5">
+                                <div class="inline-block text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-primary/10 text-primary mb-2">Signature Organic</div>
                                 <h3 class="font-display text-lg font-bold text-on-surface">Taninoplastia Smoothing</h3>
                                 <p class="text-xs text-on-surface-variant mt-1.5 leading-relaxed">Formaldehyde-free silky, healthy organic hair botox.</p>
                             </div>
                         </div>
                         <div class="p-5 pt-0">
-                            <button class="open-booking-modal w-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container py-2.5 px-4 rounded text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5" data-service="Women Taninoplastia Smoothing">
-                                Book Slot <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                            </button>
+                            <a href="https://api.whatsapp.com/send?phone=917499913972&text=Hello%20Hairport%20Salon!%20I%20would%20like%20to%20make%20a%20reservation%20for%20Women%20Taninoplastia%20Smoothing." target="_blank" rel="noopener noreferrer" class="w-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container py-2.5 px-4 rounded text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5 shadow-sm">
+                                <i class="fab fa-whatsapp text-sm"></i> Make a Reservation
+                            </a>
                         </div>
                     </article>
 
                     <!-- Women 4 -->
-                    <article class="service-card-item min-w-[280px] sm:min-w-[300px] w-[280px] sm:w-[300px] flex-shrink-0 bg-surface-container-lowest border border-border-bronze/25 rounded-lg overflow-hidden group shadow-sm gold-glow-hover flex flex-col justify-between">
+                    <article class="service-card-item card-shimmer min-w-[280px] sm:min-w-[300px] w-[280px] sm:w-[300px] flex-shrink-0 bg-surface-container-lowest border border-border-bronze/25 rounded-lg overflow-hidden group shadow-sm gold-glow-hover flex flex-col justify-between">
                         <div>
                             <div class="h-48 relative overflow-hidden">
                                 <img src="assets/women_makeup.avif" alt="Bridal & HD Makeup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                                <div class="absolute top-3 left-3 bg-charcoal/80 text-primary-container text-[10px] font-bold px-2 py-0.5 rounded tracking-widest backdrop-blur-sm">04</div>
                                 <div class="absolute top-3 right-3 bg-surface-container-lowest/95 backdrop-blur-md px-2.5 py-1 rounded border border-border-bronze/30 text-[10px] font-bold text-primary tracking-wider">
                                     90 MIN
                                 </div>
@@ -586,17 +639,18 @@
                             </div>
                         </div>
                         <div class="p-5 pt-0">
-                            <button class="open-booking-modal w-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container py-2.5 px-4 rounded text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5" data-service="Women Bridal & HD Makeup">
-                                Book Slot <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                            </button>
+                            <a href="https://api.whatsapp.com/send?phone=917499913972&text=Hello%20Hairport%20Salon!%20I%20would%20like%20to%20make%20a%20reservation%20for%20Women%20Bridal%20%26%20HD%20Makeup." target="_blank" rel="noopener noreferrer" class="w-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container py-2.5 px-4 rounded text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5 shadow-sm">
+                                <i class="fab fa-whatsapp text-sm"></i> Make a Reservation
+                            </a>
                         </div>
                     </article>
 
                     <!-- Women 5 -->
-                    <article class="service-card-item min-w-[280px] sm:min-w-[300px] w-[280px] sm:w-[300px] flex-shrink-0 bg-surface-container-lowest border border-border-bronze/25 rounded-lg overflow-hidden group shadow-sm gold-glow-hover flex flex-col justify-between">
+                    <article class="service-card-item card-shimmer min-w-[280px] sm:min-w-[300px] w-[280px] sm:w-[300px] flex-shrink-0 bg-surface-container-lowest border border-border-bronze/25 rounded-lg overflow-hidden group shadow-sm gold-glow-hover flex flex-col justify-between">
                         <div>
                             <div class="h-48 relative overflow-hidden">
                                 <img src="assets/women_nails.avif" alt="Nail Art & Extensions" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                                <div class="absolute top-3 left-3 bg-charcoal/80 text-primary-container text-[10px] font-bold px-2 py-0.5 rounded tracking-widest backdrop-blur-sm">05</div>
                                 <div class="absolute top-3 right-3 bg-surface-container-lowest/95 backdrop-blur-md px-2.5 py-1 rounded border border-border-bronze/30 text-[10px] font-bold text-primary tracking-wider">
                                     90 MIN
                                 </div>
@@ -607,9 +661,9 @@
                             </div>
                         </div>
                         <div class="p-5 pt-0">
-                            <button class="open-booking-modal w-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container py-2.5 px-4 rounded text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5" data-service="Women Nail Extensions">
-                                Book Slot <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                            </button>
+                            <a href="https://api.whatsapp.com/send?phone=917499913972&text=Hello%20Hairport%20Salon!%20I%20would%20like%20to%20make%20a%20reservation%20for%20Women%20Nail%20Extensions%20%26%20Art." target="_blank" rel="noopener noreferrer" class="w-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container py-2.5 px-4 rounded text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5 shadow-sm">
+                                <i class="fab fa-whatsapp text-sm"></i> Make a Reservation
+                            </a>
                         </div>
                     </article>
                 </div>
@@ -617,10 +671,11 @@
                 <!-- 3. KIDS SERVICES (Horizontal Scroll Row) -->
                 <div id="services-kids" class="service-tab-pane service-scroll-container hidden overflow-x-auto hide-scrollbar gap-6 pb-6 pt-2">
                     <!-- Kids 1 -->
-                    <article class="service-card-item min-w-[280px] sm:min-w-[300px] w-[280px] sm:w-[300px] flex-shrink-0 bg-surface-container-lowest border border-border-bronze/25 rounded-lg overflow-hidden group shadow-sm gold-glow-hover flex flex-col justify-between">
+                    <article class="service-card-item card-shimmer min-w-[280px] sm:min-w-[300px] w-[280px] sm:w-[300px] flex-shrink-0 bg-surface-container-lowest border border-border-bronze/25 rounded-lg overflow-hidden group shadow-sm gold-glow-hover flex flex-col justify-between">
                         <div>
                             <div class="h-48 relative overflow-hidden">
                                 <img src="assets/kids_haircut.webp" alt="Kids Haircut" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                                <div class="absolute top-3 left-3 bg-charcoal/80 text-primary-container text-[10px] font-bold px-2 py-0.5 rounded tracking-widest backdrop-blur-sm">01</div>
                                 <div class="absolute top-3 right-3 bg-surface-container-lowest/95 backdrop-blur-md px-2.5 py-1 rounded border border-border-bronze/30 text-[10px] font-bold text-primary tracking-wider">
                                     30 MIN
                                 </div>
@@ -631,17 +686,18 @@
                             </div>
                         </div>
                         <div class="p-5 pt-0">
-                            <button class="open-booking-modal w-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container py-2.5 px-4 rounded text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5" data-service="Kids Junior Haircut">
-                                Book Slot <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                            </button>
+                            <a href="https://api.whatsapp.com/send?phone=917499913972&text=Hello%20Hairport%20Salon!%20I%20would%20like%20to%20make%20a%20reservation%20for%20Kids%20Junior%20Haircut." target="_blank" rel="noopener noreferrer" class="w-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container py-2.5 px-4 rounded text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5 shadow-sm">
+                                <i class="fab fa-whatsapp text-sm"></i> Make a Reservation
+                            </a>
                         </div>
                     </article>
 
                     <!-- Kids 2 -->
-                    <article class="service-card-item min-w-[280px] sm:min-w-[300px] w-[280px] sm:w-[300px] flex-shrink-0 bg-surface-container-lowest border border-border-bronze/25 rounded-lg overflow-hidden group shadow-sm gold-glow-hover flex flex-col justify-between">
+                    <article class="service-card-item card-shimmer min-w-[280px] sm:min-w-[300px] w-[280px] sm:w-[300px] flex-shrink-0 bg-surface-container-lowest border border-border-bronze/25 rounded-lg overflow-hidden group shadow-sm gold-glow-hover flex flex-col justify-between">
                         <div>
                             <div class="h-48 relative overflow-hidden">
                                 <img src="assets/kids_styling.jpg" alt="Kids Braiding" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                                <div class="absolute top-3 left-3 bg-charcoal/80 text-primary-container text-[10px] font-bold px-2 py-0.5 rounded tracking-widest backdrop-blur-sm">02</div>
                                 <div class="absolute top-3 right-3 bg-surface-container-lowest/95 backdrop-blur-md px-2.5 py-1 rounded border border-border-bronze/30 text-[10px] font-bold text-primary tracking-wider">
                                     45 MIN
                                 </div>
@@ -652,9 +708,9 @@
                             </div>
                         </div>
                         <div class="p-5 pt-0">
-                            <button class="open-booking-modal w-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container py-2.5 px-4 rounded text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5" data-service="Kids Creative Braiding">
-                                Book Slot <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                            </button>
+                            <a href="https://api.whatsapp.com/send?phone=917499913972&text=Hello%20Hairport%20Salon!%20I%20would%20like%20to%20make%20a%20reservation%20for%20Kids%20Creative%20Braiding." target="_blank" rel="noopener noreferrer" class="w-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container py-2.5 px-4 rounded text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5 shadow-sm">
+                                <i class="fab fa-whatsapp text-sm"></i> Make a Reservation
+                            </a>
                         </div>
                     </article>
                 </div>
@@ -671,7 +727,7 @@
                         <i class="fab fa-instagram text-sm"></i> Live Instagram Stream
                     </span>
                     <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-on-surface mb-3">
-                        Latest Reels From <span class="italic font-normal text-primary">@santinoo_hairmafia</span>
+                        Latest Reels From <span class="italic font-normal gold-gradient-text">@santinoo_hairmafia</span>
                     </h2>
                     <p class="text-on-surface-variant text-sm max-w-xl mx-auto">
                         Live transformations, runway balayage, and celebrity grooming straight from Master Santino's Instagram handle.
@@ -681,7 +737,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-10">
                     <!-- Left: Instagram Embed Profile Window -->
                     <div class="lg:col-span-6 bg-surface-cream border border-border-bronze/30 rounded-lg p-2 overflow-hidden shadow-md">
-                        <iframe src="https://www.instagram.com/santinoo_hairmafia/embed" title="Live Instagram Feed @santinoo_hairmafia" class="w-full h-[520px] rounded border-0 bg-surface" allowtransparency="true" frameborder="0" scrolling="yes"></iframe>
+                        <iframe src="https://www.instagram.com/santinoo_hairmafia/embed" title="Live Instagram Feed @santinoo_hairmafia" class="w-full h-[520px] rounded border-0 bg-surface" allowtransparency="true" frameborder="0" scrolling="yes" loading="lazy"></iframe>
                     </div>
 
                     <!-- Right: Interactive Live Reel Cards -->
@@ -766,18 +822,18 @@
         </section>
 
         <!-- ==========================================================================
-             SECTION 6: GOOGLE REVIEW & LIST OF REVIEWS
+             SECTION 6: WHAT OUR CUSTOMERS SAY ABOUT US (Customer Testimonials & Google Feedback)
              ========================================================================== -->
         <section id="reviews" class="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 w-full bg-surface-cream border-t border-border-bronze/20">
             <div class="max-w-7xl mx-auto">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
                     <!-- Left: Give Feedback CTA Card -->
-                    <div class="lg:col-span-5 bg-surface-container-lowest border border-border-bronze/30 p-8 sm:p-10 rounded-lg shadow-md relative overflow-hidden">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-primary/10 text-primary text-[11px] font-bold uppercase tracking-wider mb-4">
-                            <i class="fab fa-google text-primary"></i> Google Feedback
+                    <div class="lg:col-span-5 bg-surface-container-lowest border border-border-bronze/30 p-8 sm:p-10 rounded-xl shadow-md relative overflow-hidden">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/10 text-primary text-[11px] font-bold uppercase tracking-wider mb-4 border border-primary/20">
+                            <i class="fab fa-google text-primary"></i> Verified Google Feedback
                         </div>
 
-                        <div class="flex items-center gap-1.5 text-primary text-xl mb-4">
+                        <div class="flex items-center gap-1.5 text-amber-500 text-2xl mb-4">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -787,133 +843,191 @@
 
                         <h2 class="font-display text-2xl sm:text-3xl font-bold text-on-surface mb-3 leading-snug">
                             Love our services? <br>
-                            <span class="italic font-normal text-primary">Please rate us on Google</span>
+                            <span class="italic font-normal gold-gradient-text">Please rate us on Google</span>
                         </h2>
 
                         <p class="text-on-surface-variant text-xs sm:text-sm mb-8 leading-relaxed font-light">
-                            Your feedback keeps us flying high! Share your experience with Santino &amp; Ana and help others discover Pune's premier salon sanctuary.
+                            Your feedback keeps us flying high! Share your first-class experience with Master Santino &amp; Ana and help others discover Pune's premier luxury salon sanctuary.
                         </p>
 
-                        <a href="https://g.page/r/CTQC7tZf96LGEAE/review" target="_blank" rel="noopener noreferrer" class="w-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container text-xs font-bold uppercase tracking-widest py-3.5 px-6 rounded transition-colors flex items-center justify-center gap-2 shadow">
-                            <i class="fab fa-google text-sm"></i> Write a Google Review
+                        <a href="https://g.page/r/CTQC7tZf96LGEAE/review" target="_blank" rel="noopener noreferrer" class="w-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container text-xs font-bold uppercase tracking-widest py-4 px-6 rounded-lg transition-all duration-200 flex items-center justify-center gap-2 shadow-md hover:shadow-lg">
+                            <i class="fab fa-google text-base"></i> Write a Google Review
                             <span class="material-symbols-outlined text-sm">open_in_new</span>
                         </a>
                     </div>
 
-                    <!-- Right: Scrollable Customer Reviews Feed -->
+                    <!-- Right: High-Prominence Customer Testimonials Feed -->
                     <div class="lg:col-span-7">
-                        <div class="flex justify-between items-center mb-4 border-b border-border-bronze/20 pb-3">
-                            <div class="flex items-center gap-2 text-on-surface font-bold text-sm">
-                                <i class="fab fa-google text-primary"></i> Top Google Reviews
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-6 pb-4 border-b border-border-bronze/25 gap-2">
+                            <div>
+                                <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-primary block mb-1">CLIENT EXPERIENCES</span>
+                                <h3 class="font-display text-2xl sm:text-3xl font-bold text-on-surface">
+                                    What our customers <span class="italic font-normal gold-gradient-text">say about us</span>
+                                </h3>
                             </div>
-                            <div class="text-xs text-primary font-bold">
-                                4.9 ★★★★★ (280+ Reviews)
+                            <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest border border-border-bronze/30 shadow-sm text-xs font-bold text-primary self-start sm:self-auto" data-google-reviews-badge>
+                                <i class="fab fa-google text-primary"></i> 4.8 ★★★★★ (1000+ Reviews)
                             </div>
                         </div>
 
-                        <div class="space-y-4 max-h-[460px] overflow-y-auto pr-2 custom-scrollbar">
-                            <!-- Review 1 -->
-                            <div class="bg-surface-container-lowest border border-border-bronze/20 p-5 rounded-lg shadow-sm">
-                                <div class="flex items-center justify-between mb-2">
-                                    <div class="flex items-center gap-3">
-                                        <div class="w-9 h-9 rounded-full bg-primary/10 border border-border-bronze text-primary flex items-center justify-center font-bold text-sm">
+                        <div class="space-y-5 max-h-[560px] overflow-y-auto pr-2 custom-scrollbar">
+                            <!-- Review 1 (Priya Sharma) -->
+                            <div class="bg-surface-container-lowest border border-border-bronze/25 p-6 sm:p-7 rounded-xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+                                <div class="flex items-start justify-between mb-3">
+                                    <div class="flex items-center gap-3.5">
+                                        <div class="w-12 h-12 rounded-full bg-primary/10 border-2 border-primary/30 text-primary flex items-center justify-center font-display font-bold text-lg shadow-inner flex-shrink-0">
                                             P
                                         </div>
                                         <div>
-                                            <h5 class="font-bold text-xs text-on-surface">Priya Sharma</h5>
-                                            <span class="text-[10px] text-on-surface-variant">1 week ago · Salunke Vihar</span>
+                                            <h4 class="font-display font-bold text-sm sm:text-base text-on-surface">Priya Sharma</h4>
+                                            <div class="flex items-center gap-2 text-[11px] text-on-surface-variant mt-0.5">
+                                                <span>1 week ago · Salunke Vihar</span>
+                                                <span>•</span>
+                                                <span class="text-primary font-semibold flex items-center gap-1">
+                                                    <i class="fab fa-google text-[10px]"></i> Verified
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="flex text-primary text-xs">
+                                    <div class="flex text-amber-500 text-sm">
                                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                                     </div>
                                 </div>
-                                <p class="text-xs text-on-surface-variant leading-relaxed">
-                                    "Santino is absolute magic! Got the Taninoplastia organic hair smoothening done and my hair has never felt so silky, soft, and healthy. Highly recommend Hairport by Santino in Salunke Vihar!"
+                                <div class="mb-3">
+                                    <span class="inline-block text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded bg-primary/10 text-primary">
+                                        Taninoplastia Organic Hair Botox
+                                    </span>
+                                </div>
+                                <p class="text-sm sm:text-[15px] text-on-surface leading-relaxed font-light italic">
+                                    “Santino is absolute magic! Got the Taninoplastia organic hair smoothening done and my hair has never felt so silky, soft, and healthy. Zero chemical smell. Highly recommend Hairport by Santino in Salunke Vihar!”
                                 </p>
                             </div>
 
-                            <!-- Review 2 -->
-                            <div class="bg-surface-container-lowest border border-border-bronze/20 p-5 rounded-lg shadow-sm">
-                                <div class="flex items-center justify-between mb-2">
-                                    <div class="flex items-center gap-3">
-                                        <div class="w-9 h-9 rounded-full bg-primary/10 border border-border-bronze text-primary flex items-center justify-center font-bold text-sm">
+                            <!-- Review 2 (Rohan Malhotra) -->
+                            <div class="bg-surface-container-lowest border border-border-bronze/25 p-6 sm:p-7 rounded-xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+                                <div class="flex items-start justify-between mb-3">
+                                    <div class="flex items-center gap-3.5">
+                                        <div class="w-12 h-12 rounded-full bg-primary/10 border-2 border-primary/30 text-primary flex items-center justify-center font-display font-bold text-lg shadow-inner flex-shrink-0">
                                             R
                                         </div>
                                         <div>
-                                            <h5 class="font-bold text-xs text-on-surface">Rohan Malhotra</h5>
-                                            <span class="text-[10px] text-on-surface-variant">2 weeks ago · Wanowrie</span>
+                                            <h4 class="font-display font-bold text-sm sm:text-base text-on-surface">Rohan Malhotra</h4>
+                                            <div class="flex items-center gap-2 text-[11px] text-on-surface-variant mt-0.5">
+                                                <span>2 weeks ago · Wanowrie</span>
+                                                <span>•</span>
+                                                <span class="text-primary font-semibold flex items-center gap-1">
+                                                    <i class="fab fa-google text-[10px]"></i> Verified
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="flex text-primary text-xs">
+                                    <div class="flex text-amber-500 text-sm">
                                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                                     </div>
                                 </div>
-                                <p class="text-xs text-on-surface-variant leading-relaxed">
-                                    "Best salon in Pune hands down! Santino gave me the sharpest razor fade and beard shaping. Super premium vibe and first-class hospitality."
+                                <div class="mb-3">
+                                    <span class="inline-block text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded bg-primary/10 text-primary">
+                                        Men's Razor Fade &amp; Beard Sculpting
+                                    </span>
+                                </div>
+                                <p class="text-sm sm:text-[15px] text-on-surface leading-relaxed font-light italic">
+                                    “Best salon in Pune hands down! Santino gave me the sharpest razor fade and hot towel beard shaping. Super premium vibe, impeccable hygiene, and first-class hospitality.”
                                 </p>
                             </div>
 
-                            <!-- Review 3 -->
-                            <div class="bg-surface-container-lowest border border-border-bronze/20 p-5 rounded-lg shadow-sm">
-                                <div class="flex items-center justify-between mb-2">
-                                    <div class="flex items-center gap-3">
-                                        <div class="w-9 h-9 rounded-full bg-primary/10 border border-border-bronze text-primary flex items-center justify-center font-bold text-sm">
+                            <!-- Review 3 (Ananya Kulkarni) -->
+                            <div class="bg-surface-container-lowest border border-border-bronze/25 p-6 sm:p-7 rounded-xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+                                <div class="flex items-start justify-between mb-3">
+                                    <div class="flex items-center gap-3.5">
+                                        <div class="w-12 h-12 rounded-full bg-primary/10 border-2 border-primary/30 text-primary flex items-center justify-center font-display font-bold text-lg shadow-inner flex-shrink-0">
                                             A
                                         </div>
                                         <div>
-                                            <h5 class="font-bold text-xs text-on-surface">Ananya Kulkarni</h5>
-                                            <span class="text-[10px] text-on-surface-variant">3 weeks ago · NIBM Road</span>
+                                            <h4 class="font-display font-bold text-sm sm:text-base text-on-surface">Ananya Kulkarni</h4>
+                                            <div class="flex items-center gap-2 text-[11px] text-on-surface-variant mt-0.5">
+                                                <span>3 weeks ago · NIBM Road</span>
+                                                <span>•</span>
+                                                <span class="text-primary font-semibold flex items-center gap-1">
+                                                    <i class="fab fa-google text-[10px]"></i> Verified
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="flex text-primary text-xs">
+                                    <div class="flex text-amber-500 text-sm">
                                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                                     </div>
                                 </div>
-                                <p class="text-xs text-on-surface-variant leading-relaxed">
-                                    "Ana did my bridal makeup and hair styling for my wedding reception. Everyone was complimenting my look! Thank you Ana &amp; Santino for making my big day so special!"
+                                <div class="mb-3">
+                                    <span class="inline-block text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded bg-primary/10 text-primary">
+                                        Bridal HD Glam &amp; Couture Hair
+                                    </span>
+                                </div>
+                                <p class="text-sm sm:text-[15px] text-on-surface leading-relaxed font-light italic">
+                                    “Ana did my bridal makeup and hair styling for my wedding reception. Everyone was complimenting my look! Thank you Ana &amp; Santino for making my big day so special!”
                                 </p>
                             </div>
 
-                            <!-- Review 4 -->
-                            <div class="bg-surface-container-lowest border border-border-bronze/20 p-5 rounded-lg shadow-sm">
-                                <div class="flex items-center justify-between mb-2">
-                                    <div class="flex items-center gap-3">
-                                        <div class="w-9 h-9 rounded-full bg-primary/10 border border-border-bronze text-primary flex items-center justify-center font-bold text-sm">
+                            <!-- Review 4 (Vikramaditya Deshmukh) -->
+                            <div class="bg-surface-container-lowest border border-border-bronze/25 p-6 sm:p-7 rounded-xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+                                <div class="flex items-start justify-between mb-3">
+                                    <div class="flex items-center gap-3.5">
+                                        <div class="w-12 h-12 rounded-full bg-primary/10 border-2 border-primary/30 text-primary flex items-center justify-center font-display font-bold text-lg shadow-inner flex-shrink-0">
                                             V
                                         </div>
                                         <div>
-                                            <h5 class="font-bold text-xs text-on-surface">Vikramaditya Deshmukh</h5>
-                                            <span class="text-[10px] text-on-surface-variant">1 month ago · Salunke Vihar</span>
+                                            <h4 class="font-display font-bold text-sm sm:text-base text-on-surface">Vikramaditya Deshmukh</h4>
+                                            <div class="flex items-center gap-2 text-[11px] text-on-surface-variant mt-0.5">
+                                                <span>1 month ago · Salunke Vihar</span>
+                                                <span>•</span>
+                                                <span class="text-primary font-semibold flex items-center gap-1">
+                                                    <i class="fab fa-google text-[10px]"></i> Verified
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="flex text-primary text-xs">
+                                    <div class="flex text-amber-500 text-sm">
                                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                                     </div>
                                 </div>
-                                <p class="text-xs text-on-surface-variant leading-relaxed">
-                                    "Clean, hygienic, luxury interiors, and top-tier stylists. The hair spa and scalp detox treatment was so relaxing. 5 stars all the way!"
+                                <div class="mb-3">
+                                    <span class="inline-block text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded bg-primary/10 text-primary">
+                                        Scalp Detox &amp; Rejuvenating Spa
+                                    </span>
+                                </div>
+                                <p class="text-sm sm:text-[15px] text-on-surface leading-relaxed font-light italic">
+                                    “Clean, hygienic, luxury interiors, and top-tier stylists. The hair spa and scalp detox treatment was so relaxing. 5 stars all the way!”
                                 </p>
                             </div>
 
-                            <!-- Review 5 -->
-                            <div class="bg-surface-container-lowest border border-border-bronze/20 p-5 rounded-lg shadow-sm">
-                                <div class="flex items-center justify-between mb-2">
-                                    <div class="flex items-center gap-3">
-                                        <div class="w-9 h-9 rounded-full bg-primary/10 border border-border-bronze text-primary flex items-center justify-center font-bold text-sm">
+                            <!-- Review 5 (Sneha Mehta) -->
+                            <div class="bg-surface-container-lowest border border-border-bronze/25 p-6 sm:p-7 rounded-xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+                                <div class="flex items-start justify-between mb-3">
+                                    <div class="flex items-center gap-3.5">
+                                        <div class="w-12 h-12 rounded-full bg-primary/10 border-2 border-primary/30 text-primary flex items-center justify-center font-display font-bold text-lg shadow-inner flex-shrink-0">
                                             S
                                         </div>
                                         <div>
-                                            <h5 class="font-bold text-xs text-on-surface">Sneha Mehta</h5>
-                                            <span class="text-[10px] text-on-surface-variant">1 month ago · Oxford Village</span>
+                                            <h4 class="font-display font-bold text-sm sm:text-base text-on-surface">Sneha Mehta</h4>
+                                            <div class="flex items-center gap-2 text-[11px] text-on-surface-variant mt-0.5">
+                                                <span>1 month ago · Oxford Village</span>
+                                                <span>•</span>
+                                                <span class="text-primary font-semibold flex items-center gap-1">
+                                                    <i class="fab fa-google text-[10px]"></i> Verified
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="flex text-primary text-xs">
+                                    <div class="flex text-amber-500 text-sm">
                                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                                     </div>
                                 </div>
-                                <p class="text-xs text-on-surface-variant leading-relaxed">
-                                    "Got gel nail extensions and a Japanese Kanpeiki facial from Ana. Incredible attention to detail. Definitely my go-to salon in Salunke Vihar now!"
+                                <div class="mb-3">
+                                    <span class="inline-block text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded bg-primary/10 text-primary">
+                                        Kanpeiki Facial &amp; Gel Nail Extensions
+                                    </span>
+                                </div>
+                                <p class="text-sm sm:text-[15px] text-on-surface leading-relaxed font-light italic">
+                                    “Got gel nail extensions and a Japanese Kanpeiki facial from Ana. Incredible attention to detail. Definitely my go-to salon in Salunke Vihar now!”
                                 </p>
                             </div>
                         </div>
@@ -935,7 +1049,7 @@
                         </span>
 
                         <h2 class="font-display text-3xl sm:text-4xl font-bold text-on-surface leading-tight">
-                            Visit Our <span class="italic font-normal text-primary">Sanctuary</span>
+                            Visit Our <span class="italic font-normal gold-gradient-text">Sanctuary</span>
                         </h2>
 
                         <div class="space-y-6 pt-2 text-sm">
@@ -1048,7 +1162,7 @@
                         Crystal Castle, Oxford Village Road, Salunkhe Vihar, Wanowrie, Pune - 411040
                     </p>
                     <div class="flex flex-wrap items-center gap-3 pt-2">
-                        <a href="https://wa.me/917499913972" target="_blank" rel="noopener noreferrer" class="w-9 h-9 flex items-center justify-center hover:scale-115 transition-transform duration-200" title="WhatsApp">
+                        <a href="https://wa.me/917499913972?text=Hello%20Hairport%20Salon!%20I%20would%20like%20to%20inquire%20about%20your%20services%20and%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="w-9 h-9 flex items-center justify-center hover:scale-115 transition-transform duration-200" title="WhatsApp">
                             <img src="assets/icon-whatsapp.png" alt="WhatsApp" class="w-full h-full object-contain filter drop-shadow-sm">
                         </a>
                         <a href="https://www.instagram.com/santinoo_hairmafia/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 flex items-center justify-center hover:scale-115 transition-transform duration-200" title="Instagram">
