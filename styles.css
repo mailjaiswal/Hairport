@@ -1,0 +1,309 @@
+/* ==========================================================================
+   HAIRPORT SALON BY SANTINOO - ATELIER LUMIÈRE DESIGN SYSTEM
+   ========================================================================== */
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #1a1c1c;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Custom Selection */
+::selection {
+    background-color: #F4BD73;
+    color: #1A1A1A;
+}
+
+/* Typography Classes */
+.font-display {
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Material Symbols Adjustments */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 350, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+    display: inline-block;
+}
+.material-symbols-outlined.fill-icon {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Scrollbar customization */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Custom Sleek Scrollbar for reviews list */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(186, 137, 69, 0.05);
+    border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(186, 137, 69, 0.3);
+    border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #BA8945;
+}
+
+/* Perforated ticket styling */
+.perforated-border-b {
+    border-bottom: 1px dashed rgba(186, 137, 69, 0.35);
+}
+.perforated-border-r {
+    border-right: 1px dashed rgba(186, 137, 69, 0.35);
+}
+.perforated-border-l {
+    border-left: 1px dashed rgba(186, 137, 69, 0.35);
+}
+
+/* Boarding Pass Ticket Cutouts */
+.ticket-edge-top {
+    position: relative;
+}
+.ticket-edge-top::before, .ticket-edge-top::after {
+    content: '';
+    position: absolute;
+    top: -12px;
+    width: 24px;
+    height: 24px;
+    background-color: #f9f9f9;
+    border-radius: 50%;
+    z-index: 10;
+}
+.ticket-edge-top::before { left: -12px; }
+.ticket-edge-top::after { right: -12px; }
+
+/* Subtle Gold Box Shadows & Hover Glow */
+.gold-glow-hover {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.gold-glow-hover:hover {
+    box-shadow: 0 10px 30px -10px rgba(186, 137, 69, 0.25);
+    transform: translateY(-3px);
+}
+
+/* Floating Action Dock Styling (Middle Right) */
+.floating-deck {
+    position: fixed !important;
+    right: 16px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 99 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .floating-deck {
+        right: 10px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        gap: 10px;
+    }
+    .floating-btn {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+.floating-btn {
+    width: 52px;
+    height: 52px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    padding: 0;
+    overflow: visible;
+}
+
+.floating-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.22));
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.floating-btn:hover {
+    transform: scale(1.15);
+    background: transparent;
+}
+
+.floating-btn:hover img {
+    transform: scale(1.05);
+    filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.35));
+}
+
+/* Tooltip on Floating Button hover */
+.floating-tooltip {
+    position: absolute;
+    right: 56px;
+    background: #1A1A1A;
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding: 4px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(10px);
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.floating-tooltip::after {
+    content: '';
+    position: absolute;
+    right: -4px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 4px 0 4px 4px;
+    border-style: solid;
+    border-color: transparent transparent transparent #1A1A1A;
+}
+.floating-btn:hover .floating-tooltip {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Mobile Quick Bar for floating dock */
+@media (max-width: 768px) {
+    .floating-deck {
+        right: 12px;
+        bottom: 20px;
+        top: auto;
+        transform: none;
+        gap: 10px;
+    }
+    .floating-btn {
+        width: 42px;
+        height: 42px;
+    }
+    .floating-tooltip {
+        display: none;
+    }
+}
+
+/* Service Carousel Scroll Controls */
+.service-scroll-container {
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+.service-card-item {
+    scroll-snap-align: start;
+}
+
+/* Modal Overlay Backdrop */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 10, 10, 0.7);
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    padding: 16px;
+}
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background: #ffffff;
+    border: 1px solid rgba(186, 137, 69, 0.25);
+    border-radius: 8px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    max-height: 90vh;
+    overflow-y: auto;
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+.modal-overlay.active .modal-content {
+    transform: scale(1);
+}
+
+/* Boarding Pass Output Card */
+.boarding-pass-ticket {
+    background: #F9F8F3;
+    border: 1px solid #BA8945;
+    border-radius: 6px;
+    position: relative;
+}
+.boarding-pass-ticket::before, .boarding-pass-ticket::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border: 1px solid #BA8945;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.boarding-pass-ticket::before {
+    left: -11px;
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+}
+.boarding-pass-ticket::after {
+    right: -11px;
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+
+/* Form Styles */
+.form-input-luxury {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid rgba(186, 137, 69, 0.3);
+    border-radius: 4px;
+    background: #FDFCF8;
+    color: #1A1A1A;
+    font-size: 13px;
+    transition: all 0.2s ease;
+    outline: none;
+}
+.form-input-luxury:focus {
+    border-color: #BA8945;
+    box-shadow: 0 0 0 2px rgba(186, 137, 69, 0.2);
+    background: #ffffff;
+}
+
+/* Image styling */
+img {
+    max-width: 100%;
+    height: auto;
+}
